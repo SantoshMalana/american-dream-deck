@@ -9,9 +9,15 @@ export class Router {
   init() {
     document.querySelectorAll('[data-section]').forEach(el => {
       this.sections.set(el.dataset.section, el);
+      // Give each section an ID so native hash routing works too, if desired
+      el.id = el.dataset.section;
     });
+    
+    // Listen for hash changes from clicking nav links
     window.addEventListener('hashchange', () => this.handleRoute());
-    this.handleRoute();
+    
+    // Handle initial route
+    setTimeout(() => this.handleRoute(), 100);
   }
 
   handleRoute() {
@@ -20,31 +26,15 @@ export class Router {
   }
 
   navigateTo(sectionId) {
-    if (sectionId === this.currentSection) return;
     if (!this.sections.has(sectionId)) return;
 
-    // Hide current
-    if (this.currentSection) {
-      const current = this.sections.get(this.currentSection);
-      current.classList.remove('active');
-      // Reset animate-in elements so they re-animate on re-entry
-      current.querySelectorAll('.animate-in.visible').forEach(el => {
-        el.classList.remove('visible');
-      });
-    }
-
-    // Show next
-    const next = this.sections.get(sectionId);
-    next.classList.add('active');
-    // Scroll to top of new section
-    next.scrollTop = 0;
+    const targetSection = this.sections.get(sectionId);
+    
+    // Smooth scroll to the section
+    targetSection.scrollIntoView({ behavior: 'smooth' });
 
     const prev = this.currentSection;
     this.currentSection = sectionId;
-
-    if (window.location.hash.slice(1) !== sectionId) {
-      history.replaceState(null, '', `#${sectionId}`);
-    }
 
     if (this.onSectionChange) {
       this.onSectionChange(sectionId, prev);

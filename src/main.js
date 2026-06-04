@@ -30,6 +30,38 @@ class App {
     this.onSectionEnter(this.router.currentSection || 'hero');
     StatCounter.initAll(); // Initialize counters globally using IntersectionObserver
     this.initAIForm();
+    this.initScrollObserver();
+  }
+
+  initScrollObserver() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+          const sectionId = entry.target.dataset.section;
+          
+          // Update hash without jumping
+          if (window.location.hash.slice(1) !== sectionId) {
+            history.replaceState(null, '', `#${sectionId}`);
+            
+            // Update router internal state and trigger sidebar update
+            this.router.currentSection = sectionId;
+            if (this.nav) {
+              this.nav.updateActive(sectionId);
+              this.nav.updateProgress();
+            }
+            
+            // Trigger animation
+            this.onSectionEnter(sectionId);
+          }
+        }
+      });
+    }, {
+      threshold: 0.3 // Trigger when 30% of the section is visible
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
   }
 
   onSectionEnter(sectionId) {
@@ -37,7 +69,7 @@ class App {
     if (!section) return;
 
     // Stagger animate-in elements
-    const elements = section.querySelectorAll('.animate-in');
+    const elements = section.querySelectorAll('.animate-in:not(.visible)');
     elements.forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), i * 80 + 150);
     });
