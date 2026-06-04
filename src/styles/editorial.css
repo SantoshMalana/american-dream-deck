@@ -1,0 +1,169 @@
+/* ============================================================
+   EDITORIAL.CSS — Human-crafted Asymmetric Layouts
+   ============================================================ */
+
+/* ── Massive Typography ────────────────────────────────────── */
+.massive-quote {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2xl);
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.massive-quote::before {
+  content: '“';
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  font-size: 8rem;
+  color: hsla(38, 50%, 50%, 0.15);
+  font-family: var(--font-display);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.floating-number {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-family: var(--font-display);
+  font-size: 15rem;
+  font-weight: 700;
+  line-height: 0.8;
+  color: hsla(38, 50%, 50%, 0.05);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Asymmetric Blocks ────────────────────────────────────── */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4xl);
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .editorial-grid {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+}
+
+.editorial-text-left {
+  grid-column: 1 / 6;
+  position: relative;
+  z-index: 2;
+}
+
+.editorial-img-right {
+  grid-column: 5 / 13;
+  position: relative;
+  z-index: 1;
+}
+
+.editorial-img-left {
+  grid-column: 1 / 9;
+  position: relative;
+  z-index: 1;
+}
+
+.editorial-text-right {
+  grid-column: 8 / 13;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Overlap & Parallax Effects ───────────────────────────── */
+.overlap-box {
+  background: hsla(225, 25%, 5%, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: var(--space-3xl);
+  border: 1px solid var(--color-border);
+  position: relative;
+}
+
+.overlap-box::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background: var(--gradient-gold);
+}
+
+.editorial-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.editorial-img.portrait {
+  aspect-ratio: 3/4;
+}
+
+/* ── Human Copy ────────────────────────────────────────────── */
+.human-p {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.human-p-large {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+/* ── Minimal Stats List ────────────────────────────────────── */
+.minimal-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+  border-left: 1px solid var(--color-border);
+  padding-left: var(--space-xl);
+}
+
+.minimal-stat-item {
+  position: relative;
+}
+
+.minimal-stat-value {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.minimal-stat-label {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-secondary);
+}
+
+/* ── Full Bleed Container ──────────────────────────────────── */
+.full-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}

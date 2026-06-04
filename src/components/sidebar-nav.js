@@ -50,12 +50,11 @@ export class SidebarNav {
       const item = e.target.closest('.nav-item');
       if (!item) return;
       window.location.hash = item.dataset.nav;
-      // Close mobile sidebar
-      if (window.innerWidth <= 1024) {
-        this.sidebar.classList.remove('open');
-        const overlay = document.querySelector('.sidebar-overlay');
-        if (overlay) overlay.classList.remove('visible');
-      }
+      
+      // Always close sidebar after navigation since it's an overlay
+      this.sidebar.classList.remove('open');
+      const overlay = document.querySelector('.sidebar-overlay');
+      if (overlay) overlay.classList.remove('visible');
     });
 
     // This sets the initial callback; main.js wraps it later
