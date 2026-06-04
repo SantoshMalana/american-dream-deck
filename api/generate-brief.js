@@ -63,7 +63,7 @@ Make the prospect feel like not being at American Dream is a missed opportunity.
     return res.status(200).json({ brief: generatedText });
     
   } catch (error) {
-    console.error("Bedrock API Error:", error);
+    console.error("Bedrock API Error detailed:", error);
     return res.status(500).json({ error: error.message || 'Failed to generate brief. Please try again later.' });
   }
 }
