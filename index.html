@@ -348,9 +348,84 @@
             <div class="section-divider animate-in"></div>
             <p class="section-subtitle animate-in">Food isn't an afterthought. It's a lifestyle draw that brings people back every week.</p>
           </div>
-          <div class="placeholder-content animate-in">
-            <div class="placeholder-badge">Coming in Commit 6</div>
-            <p class="placeholder-text">Cuisine categories, featured restaurants, food hall highlight, and F&B leasing inquiry.</p>
+
+          <!-- Hero Image -->
+          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 12px; overflow: hidden; position: relative;">
+            <img src="/images/dining-food-hall.png" alt="American Dream food hall" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-xl) var(--space-2xl); background: linear-gradient(transparent, hsla(220, 20%, 6%, 0.9));">
+              <div style="display: flex; gap: var(--space-3xl); align-items: flex-end;">
+                <div>
+                  <span class="card-stat" style="font-size: var(--text-3xl);" data-counter data-target="70" data-suffix="+">0</span>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Dining Options</div>
+                </div>
+                <div>
+                  <span class="card-stat" style="font-size: var(--text-3xl);" data-counter data-target="10" data-suffix="K sq ft">0</span>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Gourmet Food Hall</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dining Categories -->
+          <div style="margin-bottom: var(--space-3xl);">
+            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Dining Experiences</h3>
+            <div class="card-grid stagger-container">
+              <div class="card animate-in" style="border-left: 3px solid var(--color-accent);">
+                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">🍷</div>
+                <div class="card-title">Fine Dining</div>
+                <p class="card-text">Full-service restaurants with curated menus, extensive wine lists, and elevated atmospheres for business or celebration.</p>
+              </div>
+              <div class="card animate-in" style="border-left: 3px solid hsl(350, 70%, 55%);">
+                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">🍜</div>
+                <div class="card-title">Food Hall</div>
+                <p class="card-text">10,000 sq ft of gourmet, fast-casual, and specialty concepts — from Lady M mille crepes to Vanessa's Dumpling House.</p>
+              </div>
+              <div class="card animate-in" style="border-left: 3px solid hsl(152, 60%, 48%);">
+                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">🌍</div>
+                <div class="card-title">International</div>
+                <p class="card-text">Korean, Peruvian, Chinese, Japanese, Italian — a global culinary tour reflecting the diversity of the New York metro area.</p>
+              </div>
+              <div class="card animate-in" style="border-left: 3px solid hsl(220, 70%, 60%);">
+                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">⚡</div>
+                <div class="card-title">Quick Service</div>
+                <p class="card-text">Coca-Cola Eats food court and grab-and-go options for families moving between attractions and retail.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Restaurants -->
+          <div style="margin-bottom: var(--space-3xl);">
+            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Featured</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);" class="stagger-container">
+              <div class="card animate-in" style="text-align: center;">
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">Carpaccio</div>
+                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm);">Upscale Italian</div>
+                <p class="card-text" style="font-size: var(--text-sm);">The Avenue's anchor restaurant — raw bar, seafood, housemade pastas, and an ambiance that matches the luxury wing.</p>
+              </div>
+              <div class="card animate-in" style="text-align: center;">
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">Yard House</div>
+                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm);">American Craft</div>
+                <p class="card-text" style="font-size: var(--text-sm);">100+ craft beers on tap and an American-style menu that serves as a social anchor for the property.</p>
+              </div>
+              <div class="card animate-in" style="text-align: center;">
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">H Mart</div>
+                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm);">Korean Market</div>
+                <p class="card-text" style="font-size: var(--text-sm);">A full Korean food hall and grocery experience — bringing authentic Asian market culture into the property.</p>
+              </div>
+              <div class="card animate-in" style="text-align: center;">
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">Lady M</div>
+                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm);">Boutique Bakery</div>
+                <p class="card-text" style="font-size: var(--text-sm);">Signature mille crêpe cakes in a jewel-box setting — a dessert destination that drives foot traffic on its own.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="section-cta animate-in">
+            <div class="cta-group">
+              <a href="#partner" class="cta-button">F&B Leasing Inquiry <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+              <a href="#entertainment" class="cta-button cta-button--outline">See Entertainment</a>
+            </div>
           </div>
         </div>
       </section>
