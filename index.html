@@ -439,9 +439,75 @@
             <div class="section-divider animate-in"></div>
             <p class="section-subtitle animate-in">55% entertainment. This is what separates American Dream from every other property on the planet.</p>
           </div>
-          <div class="placeholder-content animate-in">
-            <div class="placeholder-badge">Coming in Commit 7</div>
-            <p class="placeholder-text">Nickelodeon Universe, DreamWorks Water Park, Big SNOW deep-dives with expandable cards.</p>
+
+          <!-- Hero Image -->
+          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 12px; overflow: hidden; position: relative;">
+            <img src="/images/entertainment-theme-park.png" alt="American Dream indoor theme park" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, hsla(220, 20%, 6%, 0.9), transparent 60%);"></div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-xl) var(--space-2xl);">
+              <div style="display: flex; gap: var(--space-3xl); align-items: flex-end;">
+                <div>
+                  <span class="card-stat" style="font-size: var(--text-3xl); color: var(--color-text-primary);" data-counter data-target="15" data-suffix="+">0</span>
+                  <div style="font-size: var(--text-sm); color: var(--color-accent);">Major Attractions</div>
+                </div>
+                <div>
+                  <span class="card-stat" style="font-size: var(--text-3xl); color: var(--color-text-primary);">365</span>
+                  <div style="font-size: var(--text-sm); color: var(--color-accent);">Days a Year — Weatherproof</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Major Anchors -->
+          <div style="margin-bottom: var(--space-3xl);">
+            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">The Anchors</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl);" class="stagger-container">
+              <div class="card animate-in" style="padding: var(--space-2xl); border-top: 3px solid #ff7a00;">
+                <div style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-sm);">Nickelodeon Universe</div>
+                <div style="font-size: var(--text-xs); color: #ff7a00; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-md);">Largest Indoor Theme Park in the Western Hemisphere</div>
+                <p class="card-text">8.5 acres of indoor thrill rides, family attractions, and live entertainment. A massive draw for regional tourism and local season pass holders.</p>
+              </div>
+              <div class="card animate-in" style="padding: var(--space-2xl); border-top: 3px solid #00a8e8;">
+                <div style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-sm);">DreamWorks Water Park</div>
+                <div style="font-size: var(--text-xs); color: #00a8e8; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-md);">Largest Indoor Water Park in North America</div>
+                <p class="card-text">Tropical climate year-round featuring the world's largest indoor wave pool and luxury skybox cabanas overlooking the action.</p>
+              </div>
+              <div class="card animate-in" style="padding: var(--space-2xl); border-top: 3px solid #e0e0e0;">
+                <div style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-sm);">Big SNOW</div>
+                <div style="font-size: var(--text-xs); color: #e0e0e0; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-md);">First Indoor Real-Snow Ski Resort in NA</div>
+                <p class="card-text">A 16-story, 180,000 square-foot indoor ski slope operating year-round with real snow. Attracts both beginners and experts globally.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Attractions List -->
+          <div class="card animate-in" style="margin-bottom: var(--space-3xl); background: var(--color-bg-secondary);">
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-2xl); justify-content: space-between; align-items: center;">
+              <div style="flex: 1; min-width: 250px;">
+                <h4 style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-sm);">And More...</h4>
+                <p class="card-text">A constantly evolving lineup of interactive experiences that increase dwell time and drive cross-shopping in the retail sector.</p>
+              </div>
+              <div style="flex: 2; min-width: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                <ul style="color: var(--color-text-secondary); line-height: 2; list-style: none; padding: 0; margin: 0;">
+                  <li>• SEA LIFE Aquarium</li>
+                  <li>• LEGOLAND Discovery Center</li>
+                  <li>• The Rink (NHL-size ice rink)</li>
+                </ul>
+                <ul style="color: var(--color-text-secondary); line-height: 2; list-style: none; padding: 0; margin: 0;">
+                  <li>• The Escape Game</li>
+                  <li>• Angry Birds Mini Golf</li>
+                  <li>• Blacklight Mini Golf</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="section-cta animate-in">
+            <div class="cta-group">
+              <a href="#partner" class="cta-button">Sponsorship Opportunities <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+              <a href="#events" class="cta-button cta-button--outline">Explore Venues</a>
+            </div>
           </div>
         </div>
       </section>
