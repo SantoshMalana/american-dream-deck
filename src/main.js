@@ -66,3 +66,54 @@ if (document.readyState === 'loading') {
 } else {
   app.init();
 }
+
+// AI Generator Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('ai-generator-form');
+  const btn = document.getElementById('ai-generate-btn');
+  const resultContainer = document.getElementById('ai-result-container');
+  const loadingIndicator = document.getElementById('ai-loading');
+  const outputEl = document.getElementById('ai-output');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const brandName = document.getElementById('ai-brand-name').value;
+      
+      if (!brandName) return;
+
+      // Update UI
+      btn.disabled = true;
+      btn.style.opacity = '0.5';
+      resultContainer.style.display = 'block';
+      outputEl.style.display = 'none';
+      loadingIndicator.style.display = 'block';
+
+      try {
+        const response = await fetch('/api/generate-brief', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ brandName })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || 'Failed to generate');
+        }
+
+        outputEl.textContent = data.brief;
+        loadingIndicator.style.display = 'none';
+        outputEl.style.display = 'block';
+      } catch (err) {
+        loadingIndicator.style.display = 'none';
+        outputEl.style.display = 'block';
+        outputEl.textContent = 'Error: ' + err.message;
+        outputEl.style.color = '#ff4d4f';
+      } finally {
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+    });
+  }
+});
