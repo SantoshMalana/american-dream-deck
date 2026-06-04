@@ -7,67 +7,6 @@
   border-radius: 16px;
 }
 
-/* ── Sponsorship Tier Cards — Premium Glass Treatment ─────── */
-.tier-card {
-  position: relative;
-  overflow: hidden;
-  background: var(--color-glass);
-  backdrop-filter: blur(var(--blur-glass));
-  -webkit-backdrop-filter: blur(var(--blur-glass));
-  border: 1px solid var(--color-glass-border);
-  border-radius: 16px;
-  padding: var(--space-2xl) var(--space-xl);
-  text-align: center;
-  transition:
-    transform 0.4s var(--ease-out-expo),
-    box-shadow 0.4s var(--ease-out-expo),
-    border-color 0.4s var(--ease-out-expo);
-}
-
-.tier-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--tier-color, var(--color-accent));
-}
-
-.tier-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px hsla(0, 0%, 0%, 0.3);
-  border-color: var(--tier-color, var(--color-accent));
-}
-
-.tier-badge {
-  display: inline-block;
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-weight: 600;
-  color: var(--tier-color, var(--color-accent));
-  margin-bottom: var(--space-lg);
-  padding: 4px 14px;
-  border: 1px solid var(--tier-color, var(--color-accent));
-  border-radius: 100px;
-  opacity: 0.8;
-}
-
-.tier-title {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: 500;
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-md);
-}
-
-.tier-desc {
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  line-height: 1.7;
-}
-
 /* ── Featured Restaurant Cards — Elevated Minimal ─────────── */
 .featured-grid {
   display: grid;
@@ -131,90 +70,362 @@
   line-height: 1.7;
 }
 
-/* ── Entertainment Attraction Cards — Distinct from Dining ── */
-.attraction-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+/* =============================================================
+   ENTERTAINMENT — Horizontal Showcase Cards
+   Each attraction gets a landscape-format card with a bold
+   colored accent zone, large icon initial, and inline stats.
+   ============================================================= */
+
+.attraction-showcase {
+  display: flex;
+  flex-direction: column;
   gap: var(--space-xl);
 }
 
-.attraction-card {
+.attraction-hero-card {
   position: relative;
-  padding: var(--space-2xl);
-  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  border-radius: 20px;
+  overflow: hidden;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  overflow: hidden;
   transition:
-    transform 0.4s var(--ease-out-expo),
-    border-color 0.4s var(--ease-out-expo),
-    box-shadow 0.4s var(--ease-out-expo);
+    transform 0.5s var(--ease-out-expo),
+    box-shadow 0.5s var(--ease-out-expo),
+    border-color 0.4s;
 }
 
-.attraction-card::before {
+.attraction-hero-card:hover {
+  transform: translateY(-5px) scale(1.005);
+  box-shadow: 0 20px 60px hsla(0, 0%, 0%, 0.35);
+  border-color: hsla(0, 0%, 100%, 0.08);
+}
+
+/* Colored accent zone (left) */
+.attraction-accent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--attraction-color, var(--color-accent));
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Large initial letter */
+.attraction-initial {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsla(0, 0%, 100%, 0.95);
+  line-height: 1;
+  text-shadow: 0 2px 12px hsla(0, 0%, 0%, 0.3);
+}
+
+/* Subtle pattern overlay on accent zone */
+.attraction-accent::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--attraction-color, var(--color-accent));
-  border-radius: 0 4px 4px 0;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      hsla(0, 0%, 100%, 0.03) 10px,
+      hsla(0, 0%, 100%, 0.03) 20px
+    );
+  pointer-events: none;
 }
 
-.attraction-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--attraction-color, var(--color-accent));
-  box-shadow: 0 8px 30px hsla(0, 0%, 0%, 0.3);
+/* Content zone (right) */
+.attraction-body {
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .attraction-name {
   font-family: var(--font-display);
   font-size: var(--text-xl);
-  color: var(--attraction-color, var(--color-text-primary));
-  margin-bottom: var(--space-sm);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.attraction-tagline {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--attraction-color, var(--color-accent));
+  margin-bottom: var(--space-md);
+  font-weight: 600;
 }
 
 .attraction-desc {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
   line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+/* Inline stat pills */
+.attraction-pills {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.attraction-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: hsla(0, 0%, 100%, 0.04);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.attraction-pill strong {
+  color: var(--attraction-color, var(--color-accent));
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+}
+
+.attraction-hero-card:hover .attraction-pill {
+  border-color: hsla(0, 0%, 100%, 0.1);
+  background: hsla(0, 0%, 100%, 0.06);
+}
+
+/* The "more" card — distinct full-width summary */
+.attraction-more-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: var(--space-xl) var(--space-2xl);
+  border-radius: 16px;
+  background: linear-gradient(135deg, hsla(280, 30%, 15%, 0.4), hsla(225, 20%, 8%, 0.6));
+  border: 1px solid hsla(280, 50%, 40%, 0.2);
+  transition: transform 0.4s var(--ease-out-expo), border-color 0.4s;
+}
+
+.attraction-more-card:hover {
+  transform: translateY(-3px);
+  border-color: hsla(280, 50%, 50%, 0.3);
+}
+
+.attraction-more-icon {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: hsl(280, 70%, 60%);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.attraction-more-title {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.attraction-more-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+
+/* =============================================================
+   SPONSORSHIP — Ascending Progression Cards
+   Three tiers that visually escalate: outline → solid → glow.
+   ============================================================= */
+
+.tier-progression {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  align-items: stretch;
+}
+
+/* Base tier card */
+.tier-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: var(--space-2xl) var(--space-xl) var(--space-xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.5s var(--ease-out-expo),
+    box-shadow 0.5s var(--ease-out-expo),
+    border-color 0.4s;
+}
+
+/* Tier 1 — Experiential (lightest) */
+.tier-card--experiential {
+  background: transparent;
+  border: 1px dashed hsla(152, 50%, 48%, 0.3);
+}
+
+.tier-card--experiential:hover {
+  transform: translateY(-4px);
+  border-style: solid;
+  border-color: hsl(152, 60%, 48%);
+  background: hsla(152, 30%, 15%, 0.15);
+  box-shadow: 0 8px 30px hsla(152, 50%, 30%, 0.1);
+}
+
+/* Tier 2 — Premium (medium) */
+.tier-card--premium {
+  background: var(--color-glass);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid hsla(220, 50%, 50%, 0.25);
+}
+
+.tier-card--premium:hover {
+  transform: translateY(-5px);
+  border-color: hsl(220, 70%, 60%);
+  box-shadow: 0 12px 40px hsla(220, 50%, 40%, 0.15);
+}
+
+/* Tier 3 — Presenting (heaviest, hero) */
+.tier-card--presenting {
+  background: linear-gradient(
+    135deg,
+    hsla(38, 30%, 15%, 0.5) 0%,
+    hsla(38, 20%, 8%, 0.6) 100%
+  );
+  border: 1px solid hsla(38, 60%, 50%, 0.3);
+  box-shadow: 0 0 0 1px hsla(38, 60%, 50%, 0.05);
+}
+
+.tier-card--presenting::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-gold);
+}
+
+.tier-card--presenting:hover {
+  transform: translateY(-6px);
+  border-color: hsla(38, 60%, 55%, 0.5);
+  box-shadow:
+    0 0 30px hsla(38, 60%, 50%, 0.12),
+    0 16px 50px hsla(0, 0%, 0%, 0.3);
+}
+
+/* Tier internals */
+.tier-number {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 0.85;
+  color: var(--tier-color);
+  opacity: 0.1;
+  margin-bottom: var(--space-md);
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.4s;
+}
+
+.tier-card:hover .tier-number {
+  opacity: 0.2;
+}
+
+.tier-badge {
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  color: var(--tier-color, var(--color-accent));
+  margin-bottom: var(--space-md);
+  padding: 5px 16px;
+  border: 1px solid var(--tier-color, var(--color-accent));
+  border-radius: 100px;
+}
+
+.tier-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  color: var(--color-text-primary);
   margin-bottom: var(--space-md);
 }
 
-.attraction-stats {
-  display: flex;
-  gap: var(--space-xl);
-  flex-wrap: wrap;
-  padding-top: var(--space-md);
+.tier-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-lg) 0 0 0;
+  text-align: left;
   border-top: 1px solid var(--color-border);
+  padding-top: var(--space-lg);
 }
 
-.attraction-stat-value {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  color: var(--attraction-color, var(--color-accent));
-}
-
-.attraction-stat-label {
+.tier-features li {
   font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* ── Responsive Fixes ─────────────────────────────────────── */
-@media (max-width: 768px) {
-  .attraction-grid {
+.tier-features li::before {
+  content: '✓';
+  color: var(--tier-color, var(--color-accent));
+  font-weight: bold;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .attraction-hero-card {
+    grid-template-columns: 1fr;
+  }
+
+  .attraction-accent {
+    flex-direction: row;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-xl);
+  }
+
+  .attraction-initial {
+    font-size: 2.5rem;
+  }
+
+  .tier-progression {
     grid-template-columns: 1fr;
   }
   
+  /* On mobile, reverse order so presenting is on top */
+  .tier-card--presenting { order: -1; }
+}
+
+@media (max-width: 768px) {
   .featured-grid {
     grid-template-columns: 1fr 1fr;
-  }
-  
-  .tier-card {
-    padding: var(--space-xl);
   }
 }
 
