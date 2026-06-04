@@ -77,12 +77,15 @@
 
 /* ── Section ───────────────────────────────────────────────── */
 .section {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: var(--space-4xl) var(--space-2xl);
   position: relative;
+}
+
+#hero {
+  min-height: 100vh;
 }
 
 /* Subtle radial glow at section top */
