@@ -1,0 +1,58 @@
+/* ============================================================
+   AVENUE.CSS — The Avenue Luxury Section Color Flip
+   ============================================================ */
+
+.section--avenue {
+  /* Color Flip: Cream background, dark text */
+  --color-bg-primary: #F5EDD8; /* Warm cream */
+  --color-bg-secondary: #EBE1CB;
+  --color-surface: #ffffff; /* White cards */
+  --color-border: #D8CCB5;
+  
+  /* Text changes to dark for contrast */
+  --color-text-primary: #1A1C20;
+  --color-text-secondary: #4A4D54;
+  --color-text-muted: #7A7D84;
+  
+  /* Keep gold accent */
+  --color-accent: hsl(38, 85%, 45%); /* Slightly darker gold for light bg */
+  
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.section--avenue .section-title {
+  color: var(--color-text-primary);
+}
+
+.section--avenue .section-subtitle {
+  color: var(--color-text-secondary);
+}
+
+.section--avenue .card {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(216, 204, 181, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section--avenue .card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--color-accent);
+}
+
+.section--avenue .card-title,
+.section--avenue .card-text {
+  color: var(--color-text-primary);
+}
+
+.section--avenue .card-text {
+  color: var(--color-text-secondary);
+}
+
+.section--avenue .card-stat-static {
+  background: linear-gradient(135deg, hsl(38, 85%, 45%), hsl(38, 85%, 35%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

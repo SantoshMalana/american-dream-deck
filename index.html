@@ -5,22 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>American Dream — Interactive Sales Experience</title>
   <meta name="description" content="Discover American Dream: 3 million sq ft of world-class retail, entertainment, and experiences in the heart of the New York metro. Explore leasing, sponsorship, and venue opportunities.">
-  
-  <!-- Open Graph -->
   <meta property="og:title" content="American Dream — Interactive Sales Experience">
-  <meta property="og:description" content="3 million sq ft of world-class retail, entertainment & experience. The future isn't being built — it's already here.">
+  <meta property="og:description" content="3 million sq ft of world-class retail, entertainment & experience. 7 miles from Manhattan.">
   <meta property="og:type" content="website">
-  
-  <!-- Favicon -->
+  <meta property="og:image" content="/images/retail-interior.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="American Dream — Interactive Sales Experience">
+  <meta name="twitter:description" content="3 million sq ft of world-class retail, entertainment & experience. 7 miles from Manhattan.">
+  <meta name="twitter:image" content="/images/retail-interior.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  
-  <!-- Fonts: preconnect + preload for speed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  
-  <!-- Entry -->
   <script type="module" src="/src/main.js"></script>
 </head>
 <body>
@@ -28,10 +25,8 @@
   <div class="loading-screen">
     <div class="loading-content">
       <div class="loading-logo">AMERICAN DREAM</div>
-      <div class="loading-tagline">Interactive Experience</div>
-      <div class="loading-bar">
-        <div class="loading-bar-fill"></div>
-      </div>
+      <div class="loading-tagline">East Rutherford, New Jersey</div>
+      <div class="loading-bar"><div class="loading-bar-fill"></div></div>
     </div>
   </div>
 
@@ -42,44 +37,32 @@
   <div class="sidebar-overlay"></div>
 
   <div class="app">
-    <!-- Sidebar Navigation -->
     <aside class="sidebar" role="navigation" aria-label="Section navigation">
       <div class="nav-header">
         <div class="nav-logo">AMERICAN<br>DREAM</div>
         <button class="sidebar-toggle" aria-label="Toggle navigation">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
-      <nav class="nav-list" role="tablist">
-        <!-- Populated by sidebar-nav.js -->
-      </nav>
+      <nav class="nav-list" role="tablist"></nav>
       <div class="nav-footer">
-        <span class="nav-footer-text">Interactive Sales Deck</span>
-        <div class="nav-progress">
-          <div class="nav-progress-fill"></div>
-        </div>
+        <span class="nav-footer-text">American Dream — NJ</span>
+        <div class="nav-progress"><div class="nav-progress-fill"></div></div>
       </div>
     </aside>
 
-    <!-- Main Content Area -->
     <main class="main-content">
-      
-      <!-- Section 1: Hero / Overview -->
+
+      <!-- HERO -->
       <section class="section" data-section="hero" id="hero">
-        <div class="hero-bg">
-          <div class="hero-gradient-overlay"></div>
-        </div>
+        <div class="hero-bg"><div class="hero-gradient-overlay"></div></div>
         <div class="hero-content">
           <div class="hero-badge animate-in">EAST RUTHERFORD, NEW JERSEY</div>
           <h1 class="hero-title animate-in">
-            THE FUTURE ISN'T<br>BEING BUILT.<br>
-            <span class="hero-title-accent">IT'S ALREADY HERE.</span>
+            3 MILLION SQUARE FEET.<br>
+            <span class="hero-title-accent">40 MILLION REASONS.</span>
           </h1>
-          <p class="hero-subtitle animate-in">3 million square feet of world-class retail, entertainment & experience — 7 miles from Manhattan.</p>
+          <p class="hero-subtitle animate-in">World-class retail, entertainment & experience — 7 miles from Manhattan. The largest and most ambitious mixed-use destination in the Western Hemisphere.</p>
           <div class="hero-stats animate-in">
             <div class="hero-stat">
               <span class="hero-stat-number" data-counter data-target="3" data-suffix="M">0</span>
@@ -99,27 +82,23 @@
             </div>
           </div>
           <div class="cta-group animate-in">
-            <a href="#why-property" class="cta-button cta-button--large">
-              Explore the Property
-              <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </a>
+            <a href="#why-property" class="cta-button cta-button--large">Explore the Property <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
             <a href="#partner" class="cta-button cta-button--outline cta-button--large">Partner With Us</a>
           </div>
         </div>
       </section>
 
-      <!-- Section 2: Why This Property -->
+      <!-- WHY THIS PROPERTY -->
       <section class="section" data-section="why-property" id="why-property">
         <div class="section-inner">
           <div class="section-header">
             <span class="section-label animate-in">Location & Market</span>
             <h2 class="section-title animate-in">Why This Property</h2>
             <div class="section-divider animate-in"></div>
-            <p class="section-subtitle animate-in">3 million sq ft of possibility in the center of the world's most powerful market.</p>
+            <p class="section-subtitle animate-in">3 million sq ft in the center of the world's most valuable consumer market.</p>
           </div>
-          
-          <!-- Location Map Visual -->
-          <div class="location-visual animate-in" style="margin-bottom: var(--space-3xl); border-radius: 12px; overflow: hidden; background: var(--color-surface); border: 1px solid var(--color-border); aspect-ratio: 21/9; display: flex; align-items: center; justify-content: center; position: relative;">
+
+          <div class="location-visual animate-in" style="margin-bottom: var(--space-3xl); border-radius: 16px; overflow: hidden; background: var(--color-surface); border: 1px solid var(--color-border); aspect-ratio: 21/9; display: flex; align-items: center; justify-content: center; position: relative;">
             <div style="position: absolute; inset: 0; background: radial-gradient(circle at 40% 50%, hsla(38, 85%, 55%, 0.1) 0%, transparent 60%);"></div>
             <div style="text-align: center; position: relative; z-index: 2;">
               <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-xl); margin-bottom: var(--space-md);">
@@ -152,19 +131,21 @@
               <p class="card-text">The New York tri-state area — the largest consumer market in the United States.</p>
             </div>
             <div class="card animate-in">
-              <span class="card-stat">$0</span>
-              <span class="card-label">Sales Tax on Clothing</span>
-              <p class="card-text">New Jersey's zero sales tax on apparel and footwear drives cross-border shopping from New York and beyond.</p>
+              <div class="card-callout">
+                <span class="card-callout-value">0%</span>
+                <span class="card-callout-detail">Sales Tax on Clothing & Footwear</span>
+              </div>
+              <p class="card-text">New Jersey's zero sales tax on apparel drives cross-border shopping from New York and beyond.</p>
             </div>
             <div class="card animate-in">
               <span class="card-stat" data-counter data-target="33" data-suffix="K">0</span>
               <span class="card-label">Parking Spaces</span>
-              <p class="card-text">Massive parking infrastructure plus bus and rail transit connectivity from NYC.</p>
+              <p class="card-text">Massive parking infrastructure plus bus and rail transit from NYC.</p>
             </div>
             <div class="card animate-in">
               <span class="card-stat" data-counter data-target="90" data-suffix="%">0</span>
               <span class="card-label">Leased</span>
-              <p class="card-text">Strong and growing occupancy with continued tenant demand across all categories.</p>
+              <p class="card-text">Year-over-year occupancy growth with continued tenant demand across all categories.</p>
             </div>
             <div class="card animate-in">
               <span class="card-stat" data-counter data-target="55" data-suffix="%">0</span>
@@ -181,7 +162,7 @@
         </div>
       </section>
 
-      <!-- Section 3: Retail -->
+      <!-- RETAIL -->
       <section class="section" data-section="retail" id="retail">
         <div class="section-inner">
           <div class="section-header">
@@ -191,55 +172,52 @@
             <p class="section-subtitle animate-in">450+ brands across every category, anchored by world-class entertainment that drives foot traffic no standalone retailer could generate.</p>
           </div>
 
-          <!-- Hero Image -->
-          <div class="section-hero-image animate-in" style="margin-bottom: var(--space-3xl); border-radius: 12px; overflow: hidden; position: relative;">
-            <img src="/images/retail-interior.png" alt="American Dream retail interior" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-xl) var(--space-2xl); background: linear-gradient(transparent, hsla(220, 20%, 6%, 0.9));">
+          <div class="section-hero-image animate-in" style="margin-bottom: var(--space-3xl); border-radius: 16px; overflow: hidden; position: relative;">
+            <img src="/images/retail-interior.png" alt="American Dream's multi-level retail atrium with natural light and modern architecture" loading="lazy" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-xl) var(--space-2xl); background: linear-gradient(transparent, hsla(225, 25%, 5%, 0.9));">
               <div style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary);">World-Class Retail, Unmatched Foot Traffic</div>
               <div style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-top: var(--space-xs);">Entertainment-driven retail generates 3x the dwell time of traditional malls</div>
             </div>
           </div>
 
-          <!-- Category Tiles -->
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Retail Categories</h3>
             <div class="card-grid stagger-container">
               <div class="card animate-in" style="text-align: center; padding: var(--space-2xl) var(--space-xl);">
-                <div style="font-size: 2rem; margin-bottom: var(--space-md);">👗</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
                 <div class="card-title" style="font-size: var(--text-lg);">Fashion & Apparel</div>
                 <div class="card-text" style="font-size: var(--text-sm);">200+ fashion brands from fast fashion to contemporary designers</div>
               </div>
               <div class="card animate-in" style="text-align: center; padding: var(--space-2xl) var(--space-xl);">
-                <div style="font-size: 2rem; margin-bottom: var(--space-md);">💎</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L15.09 8.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
                 <div class="card-title" style="font-size: var(--text-lg);">Beauty & Wellness</div>
                 <div class="card-text" style="font-size: var(--text-sm);">Sephora, MAC, and 40+ beauty and skincare brands</div>
               </div>
               <div class="card animate-in" style="text-align: center; padding: var(--space-2xl) var(--space-xl);">
-                <div style="font-size: 2rem; margin-bottom: var(--space-md);">📱</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
                 <div class="card-title" style="font-size: var(--text-lg);">Electronics & Tech</div>
                 <div class="card-text" style="font-size: var(--text-sm);">Microsoft, Samsung, and leading consumer tech brands</div>
               </div>
               <div class="card animate-in" style="text-align: center; padding: var(--space-2xl) var(--space-xl);">
-                <div style="font-size: 2rem; margin-bottom: var(--space-md);">🏠</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
                 <div class="card-title" style="font-size: var(--text-lg);">Home & Lifestyle</div>
                 <div class="card-text" style="font-size: var(--text-sm);">Zara Home, H&M Home, and curated lifestyle brands</div>
               </div>
               <div class="card animate-in" style="text-align: center; padding: var(--space-2xl) var(--space-xl);">
-                <div style="font-size: 2rem; margin-bottom: var(--space-md);">⚡</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
                 <div class="card-title" style="font-size: var(--text-lg);">Pop-Up & Activation</div>
                 <div class="card-text" style="font-size: var(--text-sm);">Turnkey pop-up spaces for seasonal brands and limited-time experiences</div>
               </div>
             </div>
           </div>
 
-          <!-- Growth Trajectory -->
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Growth Trajectory</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl);">
               <div class="card animate-in" style="border-left: 3px solid var(--color-accent);">
                 <span class="card-stat" data-counter data-target="90" data-suffix="%">0</span>
                 <span class="card-label">Occupancy Rate</span>
-                <p class="card-text" style="font-size: var(--text-sm);">And growing — continued demand across all categories</p>
+                <p class="card-text" style="font-size: var(--text-sm);">Year-over-year occupancy growth</p>
               </div>
               <div class="card animate-in" style="border-left: 3px solid var(--color-success);">
                 <span class="card-stat" data-counter data-target="450" data-suffix="+">0</span>
@@ -249,12 +227,11 @@
               <div class="card animate-in" style="border-left: 3px solid hsl(220, 70%, 60%);">
                 <span class="card-stat" data-counter data-target="40" data-suffix="M+">0</span>
                 <span class="card-label">Annual Visitors</span>
-                <p class="card-text" style="font-size: var(--text-sm);">Year-over-year growth driven by entertainment anchors</p>
+                <p class="card-text" style="font-size: var(--text-sm);">Driven by entertainment anchors no competitor can match</p>
               </div>
             </div>
           </div>
 
-          <!-- CTA -->
           <div class="section-cta animate-in">
             <div class="cta-group">
               <a href="#partner" class="cta-button">Explore Leasing Opportunities <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
@@ -264,8 +241,8 @@
         </div>
       </section>
 
-      <!-- Section 4: Luxury / The Avenue -->
-      <section class="section" data-section="luxury" id="luxury">
+      <!-- THE AVENUE (LUXURY) -->
+      <section class="section section--avenue" data-section="luxury" id="luxury">
         <div class="section-inner">
           <div class="section-header">
             <span class="section-label animate-in">Luxury</span>
@@ -274,52 +251,47 @@
             <p class="section-subtitle animate-in">A luxury destination inside a destination — curated, elevated, and unlike anything in the region.</p>
           </div>
 
-          <!-- Hero Image -->
-          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 12px; overflow: hidden; position: relative;">
-            <img src="/images/luxury-avenue.png" alt="The Avenue luxury wing" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, hsla(220, 20%, 6%, 0.7) 0%, transparent 50%, hsla(220, 20%, 6%, 0.5) 100%);"></div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-2xl); display: flex; justify-content: space-between; align-items: flex-end;">
-              <div>
-                <div style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-text-primary); font-style: italic;">The Avenue isn't a department in a mall.</div>
-                <div style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-accent);">It's a destination inside a destination.</div>
-              </div>
+          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 16px; overflow: hidden; position: relative;">
+            <img src="/images/luxury-avenue.png" alt="The Avenue luxury wing featuring marble floors, designer storefronts, and ambient lighting" loading="lazy" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, hsla(225, 25%, 5%, 0.7) 0%, transparent 50%, hsla(225, 25%, 5%, 0.5) 100%);"></div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-2xl);">
+              <div style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-text-primary); font-style: italic;">The Avenue isn't a department in a mall.</div>
+              <div style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-accent);">It's a destination inside a destination.</div>
             </div>
           </div>
 
-          <!-- Brand Roster -->
           <div style="margin-bottom: var(--space-3xl);">
-            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Signature Brands</h3>
+            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); margin-bottom: var(--space-xl);">Signature Brands</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-md);" class="stagger-container">
               <div class="card animate-in" style="text-align: center; padding: var(--space-xl); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); letter-spacing: 0.05em;">Hermès</div>
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); letter-spacing: 0.05em;">Hermès</div>
                 <div style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-xs);">Maison</div>
               </div>
               <div class="card animate-in" style="text-align: center; padding: var(--space-xl); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); letter-spacing: 0.05em;">Saint Laurent</div>
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); letter-spacing: 0.05em;">Saint Laurent</div>
                 <div style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-xs);">Fashion</div>
               </div>
               <div class="card animate-in" style="text-align: center; padding: var(--space-xl); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); letter-spacing: 0.05em;">Tiffany & Co.</div>
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); letter-spacing: 0.05em;">Tiffany & Co.</div>
                 <div style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-xs);">Jewelry</div>
               </div>
               <div class="card animate-in" style="text-align: center; padding: var(--space-xl); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); letter-spacing: 0.05em;">Dolce & Gabbana</div>
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); letter-spacing: 0.05em;">Dolce & Gabbana</div>
                 <div style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-xs);">Fashion</div>
               </div>
               <div class="card animate-in" style="text-align: center; padding: var(--space-xl); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); letter-spacing: 0.05em;">Gucci</div>
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); letter-spacing: 0.05em;">Gucci</div>
                 <div style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-xs);">Fashion</div>
               </div>
               <div class="card animate-in" style="text-align: center; padding: var(--space-xl); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); letter-spacing: 0.05em;">Balenciaga</div>
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); letter-spacing: 0.05em;">Balenciaga</div>
                 <div style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-xs);">Fashion</div>
               </div>
             </div>
           </div>
 
-          <!-- Experience Pillars -->
           <div style="margin-bottom: var(--space-3xl);">
-            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">The Experience</h3>
+            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); margin-bottom: var(--space-xl);">The Experience</h3>
             <div class="card-grid stagger-container">
               <div class="card animate-in" style="border-top: 2px solid var(--color-accent);">
                 <div class="card-title">Curated, Not Crowded</div>
@@ -331,35 +303,33 @@
               </div>
               <div class="card animate-in" style="border-top: 2px solid var(--color-accent);">
                 <div class="card-title">Iconic Dining</div>
-                <p class="card-text">Carpaccio anchors The Avenue's culinary experience — upscale Italian with a raw bar, extensive wine list, and the ambiance to match the brands next door.</p>
+                <p class="card-text">Carpaccio anchors The Avenue's culinary experience — upscale Italian with a raw bar, extensive wine list, and the ambiance to match.</p>
               </div>
             </div>
           </div>
 
-          <!-- CTA -->
           <div class="section-cta animate-in">
             <div class="cta-group">
-              <a href="#partner" class="cta-button">Schedule a Luxury Leasing Consultation <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+              <a href="#partner" class="cta-button">Book a Private Consultation <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
               <a href="#dining" class="cta-button cta-button--outline">Explore Dining</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Section 5: Dining & Lifestyle -->
+      <!-- DINING -->
       <section class="section" data-section="dining" id="dining">
         <div class="section-inner">
           <div class="section-header">
             <span class="section-label animate-in">Culinary</span>
             <h2 class="section-title animate-in">Dining & Lifestyle</h2>
             <div class="section-divider animate-in"></div>
-            <p class="section-subtitle animate-in">Food isn't an afterthought. It's a lifestyle draw that brings people back every week.</p>
+            <p class="section-subtitle animate-in">70+ dining concepts. From Michelin-caliber to grab-and-go — every appetite, every occasion.</p>
           </div>
 
-          <!-- Hero Image -->
-          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 12px; overflow: hidden; position: relative;">
-            <img src="/images/dining-food-hall.png" alt="American Dream food hall" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-xl) var(--space-2xl); background: linear-gradient(transparent, hsla(220, 20%, 6%, 0.9));">
+          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 16px; overflow: hidden; position: relative;">
+            <img src="/images/dining-food-hall.png" alt="American Dream gourmet food hall with diverse dining options" loading="lazy" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-xl) var(--space-2xl); background: linear-gradient(transparent, hsla(225, 25%, 5%, 0.9));">
               <div style="display: flex; gap: var(--space-3xl); align-items: flex-end;">
                 <div>
                   <span class="card-stat" style="font-size: var(--text-3xl);" data-counter data-target="70" data-suffix="+">0</span>
@@ -373,34 +343,32 @@
             </div>
           </div>
 
-          <!-- Dining Categories -->
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Dining Experiences</h3>
             <div class="card-grid stagger-container">
               <div class="card animate-in" style="border-left: 3px solid var(--color-accent);">
-                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">🍷</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg></div>
                 <div class="card-title">Fine Dining</div>
                 <p class="card-text">Full-service restaurants with curated menus, extensive wine lists, and elevated atmospheres for business or celebration.</p>
               </div>
               <div class="card animate-in" style="border-left: 3px solid hsl(350, 70%, 55%);">
-                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">🍜</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h1a4 4 0 110 8h-1"/><path d="M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/></svg></div>
                 <div class="card-title">Food Hall</div>
                 <p class="card-text">10,000 sq ft of gourmet, fast-casual, and specialty concepts — from Lady M mille crepes to Vanessa's Dumpling House.</p>
               </div>
               <div class="card animate-in" style="border-left: 3px solid hsl(152, 60%, 48%);">
-                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">🌍</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
                 <div class="card-title">International</div>
                 <p class="card-text">Korean, Peruvian, Chinese, Japanese, Italian — a global culinary tour reflecting the diversity of the New York metro area.</p>
               </div>
               <div class="card animate-in" style="border-left: 3px solid hsl(220, 70%, 60%);">
-                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">⚡</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h1a4 4 0 110 8h-1"/><path d="M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/></svg></div>
                 <div class="card-title">Quick Service</div>
-                <p class="card-text">Coca-Cola Eats food court and grab-and-go options for families moving between attractions and retail.</p>
+                <p class="card-text">Coca-Cola Eats food court and grab-and-go options for families between attractions and retail.</p>
               </div>
             </div>
           </div>
 
-          <!-- Featured Restaurants -->
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Featured</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);" class="stagger-container">
@@ -417,7 +385,7 @@
               <div class="card animate-in" style="text-align: center;">
                 <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">H Mart</div>
                 <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm);">Korean Market</div>
-                <p class="card-text" style="font-size: var(--text-sm);">A full Korean food hall and grocery experience — bringing authentic Asian market culture into the property.</p>
+                <p class="card-text" style="font-size: var(--text-sm);">A full Korean food hall and grocery experience — authentic Asian market culture inside the property.</p>
               </div>
               <div class="card animate-in" style="text-align: center;">
                 <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">Lady M</div>
@@ -427,7 +395,6 @@
             </div>
           </div>
 
-          <!-- CTA -->
           <div class="section-cta animate-in">
             <div class="cta-group">
               <a href="#partner" class="cta-button">F&B Leasing Inquiry <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
@@ -437,7 +404,7 @@
         </div>
       </section>
 
-      <!-- Section 6: Entertainment -->
+      <!-- ENTERTAINMENT -->
       <section class="section" data-section="entertainment" id="entertainment">
         <div class="section-inner">
           <div class="section-header">
@@ -447,25 +414,23 @@
             <p class="section-subtitle animate-in">55% entertainment. This is what separates American Dream from every other property on the planet.</p>
           </div>
 
-          <!-- Hero Image -->
-          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 12px; overflow: hidden; position: relative;">
-            <img src="/images/entertainment-theme-park.png" alt="American Dream indoor theme park" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to top, hsla(220, 20%, 6%, 0.9), transparent 60%);"></div>
+          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 16px; overflow: hidden; position: relative;">
+            <img src="/images/entertainment-theme-park.png" alt="Nickelodeon Universe indoor theme park with roller coasters" loading="lazy" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, hsla(225, 25%, 5%, 0.9), transparent 60%);"></div>
             <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-xl) var(--space-2xl);">
               <div style="display: flex; gap: var(--space-3xl); align-items: flex-end;">
                 <div>
-                  <span class="card-stat" style="font-size: var(--text-3xl); color: var(--color-text-primary);" data-counter data-target="15" data-suffix="+">0</span>
+                  <span class="card-stat" style="font-size: var(--text-3xl);" data-counter data-target="15" data-suffix="+">0</span>
                   <div style="font-size: var(--text-sm); color: var(--color-accent);">Major Attractions</div>
                 </div>
                 <div>
-                  <span class="card-stat" style="font-size: var(--text-3xl); color: var(--color-text-primary);">365</span>
+                  <span class="card-stat-static">365</span>
                   <div style="font-size: var(--text-sm); color: var(--color-accent);">Days a Year — Weatherproof</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Major Anchors -->
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">The Anchors</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl);" class="stagger-container">
@@ -487,29 +452,23 @@
             </div>
           </div>
 
-          <!-- Additional Attractions List -->
           <div class="card animate-in" style="margin-bottom: var(--space-3xl); background: var(--color-bg-secondary);">
             <div style="display: flex; flex-wrap: wrap; gap: var(--space-2xl); justify-content: space-between; align-items: center;">
               <div style="flex: 1; min-width: 250px;">
-                <h4 style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-sm);">And More...</h4>
-                <p class="card-text">A constantly evolving lineup of interactive experiences that increase dwell time and drive cross-shopping in the retail sector.</p>
+                <h4 style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-sm);">And More</h4>
+                <p class="card-text">Every visit is different. A constantly expanding lineup of interactive experiences.</p>
               </div>
-              <div style="flex: 2; min-width: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
-                <ul style="color: var(--color-text-secondary); line-height: 2; list-style: none; padding: 0; margin: 0;">
-                  <li>• SEA LIFE Aquarium</li>
-                  <li>• LEGOLAND Discovery Center</li>
-                  <li>• The Rink (NHL-size ice rink)</li>
-                </ul>
-                <ul style="color: var(--color-text-secondary); line-height: 2; list-style: none; padding: 0; margin: 0;">
-                  <li>• The Escape Game</li>
-                  <li>• Angry Birds Mini Golf</li>
-                  <li>• Blacklight Mini Golf</li>
-                </ul>
+              <div style="flex: 2; min-width: 300px; display: flex; flex-wrap: wrap; gap: var(--space-sm);">
+                <span class="tag">SEA LIFE Aquarium</span>
+                <span class="tag">LEGOLAND Discovery Center</span>
+                <span class="tag">The Rink (NHL-size)</span>
+                <span class="tag">The Escape Game</span>
+                <span class="tag">Angry Birds Mini Golf</span>
+                <span class="tag">Blacklight Mini Golf</span>
               </div>
             </div>
           </div>
 
-          <!-- CTA -->
           <div class="section-cta animate-in">
             <div class="cta-group">
               <a href="#partner" class="cta-button">Sponsorship Opportunities <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
@@ -519,7 +478,7 @@
         </div>
       </section>
 
-      <!-- Section 7: Events & Venues -->
+      <!-- EVENTS -->
       <section class="section" data-section="events" id="events">
         <div class="section-inner">
           <div class="section-header">
@@ -529,39 +488,36 @@
             <p class="section-subtitle animate-in">A 3,000-seat performing arts center, world-class attractions, and a million square feet of activation space.</p>
           </div>
 
-          <!-- Hero Image -->
-          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 12px; overflow: hidden; position: relative;">
-            <img src="/images/concert-venue.png" alt="Dream Live concert venue" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, hsla(220, 20%, 6%, 0.8) 0%, transparent 50%, hsla(220, 20%, 6%, 0.4) 100%);"></div>
+          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 16px; overflow: hidden; position: relative;">
+            <img src="/images/concert-venue.png" alt="Dream Live performing arts center with stage lighting" loading="lazy" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, hsla(225, 25%, 5%, 0.8) 0%, transparent 50%, hsla(225, 25%, 5%, 0.4) 100%);"></div>
             <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-xl) var(--space-2xl);">
               <div style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-text-primary); margin-bottom: var(--space-xs);">Dream Live</div>
               <div style="font-size: var(--text-sm); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em;">State-of-the-Art Performing Arts Center</div>
             </div>
           </div>
 
-          <!-- Event Categories -->
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Event Capabilities</h3>
             <div class="card-grid stagger-container">
               <div class="card animate-in">
-                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">🎤</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
                 <div class="card-title">Live Concerts & Tours</div>
-                <p class="card-text">Fully equipped stage, lighting, and sound systems for national touring acts and exclusive residency performances in an intimate 3,000-seat setting.</p>
+                <p class="card-text">Fully equipped stage, lighting, and sound for national touring acts and exclusive residencies in an intimate 3,000-seat setting.</p>
               </div>
               <div class="card animate-in">
-                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">💼</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
                 <div class="card-title">Corporate & Conferences</div>
-                <p class="card-text">Customizable event spaces, breakout rooms, and the ability to rent out entire attractions (like the Water Park) for unforgettable corporate retreats and product launches.</p>
+                <p class="card-text">Customizable event spaces with the ability to rent entire attractions for unforgettable corporate retreats and product launches.</p>
               </div>
               <div class="card animate-in">
-                <div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">🚀</div>
+                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
                 <div class="card-title">Brand Activations</div>
-                <p class="card-text">High-traffic concourses and grand courts available for experiential marketing, immersive pop-ups, and interactive brand installations that reach 40M+ annual visitors.</p>
+                <p class="card-text">High-traffic concourses and grand courts for experiential marketing, immersive pop-ups, and interactive installations reaching 40M+ visitors.</p>
               </div>
             </div>
           </div>
 
-          <!-- CTA -->
           <div class="section-cta animate-in">
             <div class="cta-group">
               <a href="#partner" class="cta-button">Book an Event or Venue <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
@@ -570,73 +526,85 @@
         </div>
       </section>
 
-      <!-- Section 8: Partner With Us -->
+      <!-- PARTNER -->
       <section class="section" data-section="partner" id="partner">
         <div class="section-inner">
           <div class="section-header">
             <span class="section-label animate-in">Take Action</span>
             <h2 class="section-title animate-in">Partner With Us</h2>
             <div class="section-divider animate-in"></div>
-            <p class="section-subtitle animate-in">Whether you're opening a flagship, launching a brand activation, or booking a world-class venue — let's build something extraordinary.</p>
+            <p class="section-subtitle animate-in">Your next chapter starts at American Dream. Whether you're opening a flagship, launching an activation, or booking a world-class venue.</p>
           </div>
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: var(--space-2xl); margin-bottom: var(--space-3xl);" class="stagger-container">
-            <!-- Left Column: Paths & Contact -->
             <div class="animate-in">
-              <h3 style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Let's Talk</h3>
-              <p style="color: var(--color-text-secondary); margin-bottom: var(--space-xl); line-height: 1.6;">Our leasing and partnerships team is ready to help you find the perfect footprint within American Dream.</p>
-              
-              <div style="display: flex; flex-direction: column; gap: var(--space-md); margin-bottom: var(--space-2xl);">
-                <div class="card" style="padding: var(--space-md); cursor: pointer; border-color: var(--color-accent-subtle);">
-                  <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary);">Retail & Dining Leasing</div>
-                  <div style="font-size: var(--text-sm); color: var(--color-text-muted);">Permanent storefronts and food hall concepts.</div>
-                </div>
-                <div class="card" style="padding: var(--space-md); cursor: pointer;">
-                  <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary);">The Avenue (Luxury)</div>
-                  <div style="font-size: var(--text-sm); color: var(--color-text-muted);">Exclusive placement in our luxury wing.</div>
-                </div>
-                <div class="card" style="padding: var(--space-md); cursor: pointer;">
-                  <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary);">Sponsorships & Pop-Ups</div>
-                  <div style="font-size: var(--text-sm); color: var(--color-text-muted);">Brand activations, naming rights, and temporary footprints.</div>
-                </div>
-              </div>
+              <h3 style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Get in Touch</h3>
+              <p style="color: var(--color-text-secondary); margin-bottom: var(--space-xl); line-height: 1.6;">Direct line to our leasing and partnerships team.</p>
 
-              <a href="mailto:partnerships@americandream.com" class="cta-button">Email the Partnerships Team</a>
+              <form id="contact-form" class="contact-form" style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <input type="text" name="name" placeholder="Your Name" required class="form-input">
+                <input type="text" name="company" placeholder="Company" required class="form-input">
+                <select name="partnership-type" required class="form-input">
+                  <option value="" disabled selected>Partnership Type</option>
+                  <option value="retail">Retail & Dining Leasing</option>
+                  <option value="luxury">The Avenue (Luxury)</option>
+                  <option value="sponsorship">Sponsorships & Pop-Ups</option>
+                  <option value="events">Events & Venue Booking</option>
+                </select>
+                <textarea name="message" placeholder="Tell us about your brand or concept..." rows="4" class="form-input"></textarea>
+                <button type="submit" class="cta-button" style="width: 100%; justify-content: center;">Send Inquiry <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg></span></button>
+              </form>
             </div>
 
-            <!-- Right Column: AI Generator -->
-            <div class="animate-in" style="background: var(--color-surface); padding: var(--space-2xl); border-radius: 12px; border: 1px solid var(--color-border); position: relative; overflow: hidden;">
-              <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--color-accent), hsl(220, 70%, 60%));"></div>
-              
+            <div class="animate-in" style="background: var(--color-surface); padding: var(--space-2xl); border-radius: 16px; border: 1px solid var(--color-border); position: relative; overflow: hidden;">
+              <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--gradient-gold);"></div>
               <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
-                <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; color: hsla(220, 20%, 6%, 1); font-size: 12px;">✨</div>
+                <div class="card-icon" style="color: var(--color-accent);" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L15.09 8.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
                 <h3 style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-accent);">AI Opportunity Brief</h3>
               </div>
-              
-              <p style="color: var(--color-text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-xl); line-height: 1.6;">Tell us your brand or concept, and our AI will generate a custom pitch showing exactly how you fit into the American Dream ecosystem.</p>
-
+              <p style="color: var(--color-text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-xl); line-height: 1.6;">Enter your brand name below and get an instant, AI-crafted pitch tailored to your category.</p>
               <form id="ai-generator-form" style="display: flex; flex-direction: column; gap: var(--space-md);">
-                <input type="text" id="ai-brand-name" placeholder="e.g., A high-end sneaker boutique" required style="width: 100%; padding: var(--space-md); border-radius: 8px; border: 1px solid var(--color-border); background: var(--color-bg-primary); color: var(--color-text-primary); font-family: var(--font-body); font-size: var(--text-base); outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='hsla(38,85%,55%,0.5)'" onblur="this.style.borderColor=''">
-                
-                <button type="submit" class="cta-button" style="width: 100%; justify-content: center;" id="ai-generate-btn">
-                  <span>Generate Custom Brief</span>
-                </button>
+                <input type="text" id="ai-brand-name" placeholder="e.g., A high-end sneaker boutique" required class="form-input">
+                <button type="submit" class="cta-button" style="width: 100%; justify-content: center;" id="ai-generate-btn"><span>Generate Custom Brief</span></button>
               </form>
-
               <div id="ai-result-container" style="display: none; margin-top: var(--space-xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
                 <div id="ai-loading" style="display: none; text-align: center; color: var(--color-text-muted); font-size: var(--text-sm);">
-                  <div style="margin-bottom: var(--space-sm);">Analyzing synergy with American Dream...</div>
-                  <div class="loading-spinner" style="width: 24px; height: 24px; border: 2px solid var(--color-border); border-top-color: var(--color-accent); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
-
+                  <div style="margin-bottom: var(--space-sm);">Generating your opportunity brief...</div>
+                  <div style="width: 24px; height: 24px; border: 2px solid var(--color-border); border-top-color: var(--color-accent); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
                 </div>
-                <div id="ai-output" style="color: var(--color-text-primary); font-size: var(--text-sm); line-height: 1.6; white-space: pre-wrap; font-family: var(--font-body);"></div>
+                <div id="ai-output" style="color: var(--color-text-primary); font-size: var(--text-sm); line-height: 1.7; white-space: pre-wrap; font-family: var(--font-body);"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="footer-logo">AMERICAN DREAM</div>
+            <p class="footer-address">1 American Dream Way<br>East Rutherford, NJ 07073</p>
+          </div>
+          <div class="footer-links">
+            <a href="#hero">Home</a>
+            <a href="#why-property">Property</a>
+            <a href="#retail">Retail</a>
+            <a href="#luxury">The Avenue</a>
+            <a href="#dining">Dining</a>
+            <a href="#entertainment">Entertainment</a>
+            <a href="#partner">Partner</a>
+          </div>
+          <div class="footer-legal">
+            <span>© 2026 American Dream. All Rights Reserved.</span>
+            <span class="footer-legal-links">Privacy Policy · Terms of Use</span>
+          </div>
+        </div>
+      </footer>
+
     </main>
   </div>
+
+  <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
 </body>
 </html>

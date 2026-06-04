@@ -97,3 +97,110 @@
   line-height: 1.7;
   margin: 0;
 }
+
+/* ---- Card icon (SVG replacement for emoji) ---- */
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+  opacity: 0.85;
+}
+
+/* ---- Static callout (e.g. 0% Sales Tax) ---- */
+.card-callout {
+  margin-bottom: var(--space-md);
+}
+
+.card-callout-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  line-height: 1.1;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-callout-detail {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  margin-top: var(--space-xs);
+}
+
+/* ---- Static stat (e.g. 365 — not animated) ---- */
+.card-stat-static {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  line-height: 1.1;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Tag chips (replacing bullet lists) ---- */
+.tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--color-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 100px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+  transition: all 0.3s var(--ease-out-expo);
+}
+
+.tag:hover {
+  border-color: hsla(38, 50%, 50%, 0.2);
+  color: var(--color-text-primary);
+  background: hsla(38, 50%, 50%, 0.06);
+}
+
+/* ---- Form inputs ---- */
+.form-input {
+  width: 100%;
+  padding: var(--space-md);
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  outline: none;
+  transition: border-color 0.3s var(--ease-out-expo), box-shadow 0.3s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input:focus {
+  border-color: hsla(38, 75%, 55%, 0.5);
+  box-shadow: 0 0 0 3px hsla(38, 75%, 55%, 0.08);
+}
+
+.form-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+select.form-input {
+  cursor: pointer;
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 100px;
+}

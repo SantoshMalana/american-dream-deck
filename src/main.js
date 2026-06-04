@@ -28,6 +28,7 @@ class App {
 
     await this.loading.hide();
     this.onSectionEnter(this.router.currentSection || 'hero');
+    StatCounter.initAll(); // Initialize counters globally using IntersectionObserver
     this.initAIForm();
   }
 
@@ -40,14 +41,6 @@ class App {
     elements.forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), i * 80 + 150);
     });
-
-    // Animate counters only once per section
-    if (!this.animatedSections.has(sectionId)) {
-      this.animatedSections.add(sectionId);
-      setTimeout(() => {
-        StatCounter.initAll(section).forEach(c => c.animate());
-      }, 400);
-    }
   }
 
   initAIForm() {
