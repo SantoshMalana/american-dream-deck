@@ -10,10 +10,15 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Brand name is required' });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    return res.status(500).json({ error: 'GEMINI_API_KEY is not set in environment variables.' });
+  const keysString = process.env.GEMINI_API_KEYS;
+  if (!keysString) {
+    return res.status(500).json({ error: 'GEMINI_API_KEYS is not set in environment variables.' });
   }
+
+  // Split the comma-separated keys and pick a random one (stateless round-robin)
+  const keys = keysString.split(',').map(k => k.trim()).filter(Boolean);
+  const apiKey = keys[Math.floor(Math.random() * keys.length)];
+
 
   try {
     const systemInstruction = `You are a world-class commercial real estate leasing director at American Dream (the mega-mall in New Jersey).
