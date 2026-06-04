@@ -1,0 +1,15 @@
+{
+  "name": "american-dream-deck",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Interactive sales deck for American Dream — East Rutherford, NJ",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

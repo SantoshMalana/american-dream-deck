@@ -1,0 +1,237 @@
+/* ============================================================
+   NAVIGATION.CSS — Sidebar Navigation
+   American Dream Interactive Sales Deck
+   
+   Header with branding, nav item list with active indicator,
+   footer with progress bar, and sidebar toggle button.
+   ============================================================ */
+
+/* ── Nav Header ────────────────────────────────────────────── */
+.nav-header {
+  padding: var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-shrink: 0;
+}
+
+.nav-header-text {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: opacity var(--transition-fast),
+              visibility var(--transition-fast);
+}
+
+.nav-logo-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+/* ── Nav List ──────────────────────────────────────────────── */
+.nav-list {
+  padding: var(--space-md) 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ── Nav Item ──────────────────────────────────────────────── */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+  padding: var(--space-md) var(--space-xl);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  position: relative;
+  transition: color var(--transition-fast),
+              background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+/* Left border indicator */
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--color-accent);
+  border-radius: 0 2px 2px 0;
+  transition: height var(--transition-normal);
+}
+
+/* Hover */
+.nav-item:hover {
+  color: var(--color-text-secondary);
+  background-color: hsla(220, 15%, 14%, 0.4);
+}
+
+/* Active */
+.nav-item.active {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.nav-item.active::before {
+  height: 60%;
+}
+
+/* ── Nav Icon ──────────────────────────────────────────────── */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-item:hover .nav-icon {
+  opacity: 0.7;
+}
+
+.nav-item.active .nav-icon {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+/* ── Nav Text (label next to icon) ─────────────────────────── */
+.nav-text {
+  transition: opacity var(--transition-fast),
+              visibility var(--transition-fast);
+}
+
+/* ── Nav Section Number ────────────────────────────────────── */
+.nav-number {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  min-width: 1.2em;
+  opacity: 0.6;
+}
+
+.nav-item.active .nav-number {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+/* ── Nav Footer ────────────────────────────────────────────── */
+.nav-footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.nav-footer-text {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  transition: opacity var(--transition-fast),
+              visibility var(--transition-fast);
+}
+
+/* ── Nav Progress Bar ──────────────────────────────────────── */
+.nav-progress {
+  height: 2px;
+  background: var(--color-border);
+  position: relative;
+  margin-top: var(--space-md);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.nav-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: var(--color-accent);
+  border-radius: 1px;
+  transition: width var(--transition-normal);
+}
+
+/* ── Sidebar Toggle ────────────────────────────────────────── */
+.sidebar-toggle {
+  position: absolute;
+  top: var(--space-xl);
+  right: calc(-1 * var(--space-lg));
+  z-index: 101;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color var(--transition-fast),
+              background-color var(--transition-fast),
+              transform var(--transition-fast);
+}
+
+.sidebar-toggle:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-hover);
+}
+
+.sidebar-toggle svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--transition-fast);
+}
+
+.sidebar.collapsed .sidebar-toggle svg {
+  transform: rotate(180deg);
+}
+
+/* ── Mobile Menu Button ────────────────────────────────────── */
+.mobile-menu-btn {
+  display: none;
+  position: fixed;
+  top: var(--space-md);
+  left: var(--space-md);
+  z-index: 98;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .sidebar-toggle {
+    display: none;
+  }
+}

@@ -1,0 +1,79 @@
+/* ============================================================
+   TOKENS.CSS — Design Token System
+   American Dream Interactive Sales Deck
+   
+   Single source of truth for all visual primitives.
+   Every color, size, and timing value used across the deck
+   is defined here as a CSS custom property.
+   ============================================================ */
+
+:root {
+  /* ── Core Palette ── dark luxury with warm accents ────────── */
+  --color-bg-primary:     hsl(220, 20%, 6%);
+  --color-bg-secondary:   hsl(220, 18%, 10%);
+  --color-bg-sidebar:     hsl(220, 22%, 8%);
+  --color-surface:        hsl(220, 15%, 14%);
+  --color-surface-hover:  hsl(220, 15%, 18%);
+  --color-border:         hsl(220, 12%, 20%);
+
+  /* ── Text Hierarchy ──────────────────────────────────────── */
+  --color-text-primary:   hsl(0, 0%, 95%);
+  --color-text-secondary: hsl(220, 10%, 65%);
+  --color-text-muted:     hsl(220, 8%, 45%);
+
+  /* ── Accent — warm gold (luxury, aspiration) ─────────────── */
+  --color-accent:         hsl(38, 85%, 55%);
+  --color-accent-hover:   hsl(38, 90%, 62%);
+  --color-accent-subtle:  hsl(38, 40%, 20%);
+
+  /* ── Semantic ────────────────────────────────────────────── */
+  --color-success:        hsl(152, 60%, 48%);
+  --color-cta:            hsl(38, 85%, 55%);
+
+  /* ── Typography ──────────────────────────────────────────── */
+  --font-display:  'Playfair Display', Georgia, serif;
+  --font-body:     'Inter', system-ui, sans-serif;
+
+  /* ── Type Scale (1.25 ratio) ─────────────────────────────── */
+  --text-xs:    0.75rem;    /*  12px */
+  --text-sm:    0.875rem;   /*  14px */
+  --text-base:  1rem;       /*  16px */
+  --text-lg:    1.25rem;    /*  20px */
+  --text-xl:    1.563rem;   /*  25px */
+  --text-2xl:   1.953rem;   /*  31px */
+  --text-3xl:   2.441rem;   /*  39px */
+  --text-4xl:   3.052rem;   /*  49px */
+  --text-hero:  4.5rem;     /*  72px */
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  --space-xs:   0.25rem;    /*   4px */
+  --space-sm:   0.5rem;     /*   8px */
+  --space-md:   1rem;       /*  16px */
+  --space-lg:   1.5rem;     /*  24px */
+  --space-xl:   2rem;       /*  32px */
+  --space-2xl:  3rem;       /*  48px */
+  --space-3xl:  4rem;       /*  64px */
+  --space-4xl:  6rem;       /*  96px */
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  --sidebar-width:     280px;
+  --sidebar-collapsed:  60px;
+  --section-max-width: 1200px;
+  --section-padding:   var(--space-3xl);
+
+  /* ── Easing ──────────────────────────────────────────────── */
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Shadows ─────────────────────────────────────────────── */
+  --shadow-sm:   0 1px 3px hsla(0, 0%, 0%, 0.3);
+  --shadow-md:   0 4px 12px hsla(0, 0%, 0%, 0.4);
+  --shadow-lg:   0 8px 30px hsla(0, 0%, 0%, 0.5);
+  --shadow-glow: 0 0 40px hsla(38, 85%, 55%, 0.15);
+
+  /* ── Transitions ─────────────────────────────────────────── */
+  --transition-fast:   150ms var(--ease-out-quart);
+  --transition-normal: 300ms var(--ease-out-expo);
+  --transition-slow:   500ms var(--ease-out-expo);
+}

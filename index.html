@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>American Dream — Interactive Sales Experience</title>
+  <meta name="description" content="Discover American Dream: 3 million sq ft of world-class retail, entertainment, and experiences in the heart of the New York metro. Explore leasing, sponsorship, and venue opportunities.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="American Dream — Interactive Sales Experience">
+  <meta property="og:description" content="3 million sq ft of world-class retail, entertainment & experience. The future isn't being built — it's already here.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Entry -->
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen active">
+    <div class="loading-content">
+      <div class="loading-logo">AMERICAN DREAM</div>
+      <div class="loading-tagline">Interactive Experience</div>
+      <div class="loading-bar">
+        <div class="loading-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" role="navigation" aria-label="Section navigation">
+      <div class="nav-header">
+        <div class="nav-logo">AMERICAN<br>DREAM</div>
+        <button class="sidebar-toggle" aria-label="Toggle navigation">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="nav-list" role="tablist">
+        <!-- Populated by sidebar-nav.js -->
+      </nav>
+      <div class="nav-footer">
+        <span class="nav-footer-text">Interactive Sales Deck</span>
+        <div class="nav-progress">
+          <div class="nav-progress-fill"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Section 1: Hero / Overview -->
+      <section class="section" data-section="hero" id="hero">
+        <div class="hero-bg">
+          <div class="hero-gradient-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-badge animate-in">EAST RUTHERFORD, NEW JERSEY</div>
+          <h1 class="hero-title animate-in">
+            THE FUTURE ISN'T<br>BEING BUILT.<br>
+            <span class="hero-title-accent">IT'S ALREADY HERE.</span>
+          </h1>
+          <p class="hero-subtitle animate-in">3 million square feet of world-class retail, entertainment & experience — 7 miles from Manhattan.</p>
+          <div class="hero-stats animate-in">
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-counter data-target="3" data-suffix="M">0</span>
+              <span class="hero-stat-label">SQ FT</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-counter data-target="40" data-suffix="M+">0</span>
+              <span class="hero-stat-label">ANNUAL VISITORS</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-counter data-target="450" data-suffix="+">0</span>
+              <span class="hero-stat-label">BRANDS</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-counter data-target="55" data-suffix="%">0</span>
+              <span class="hero-stat-label">ENTERTAINMENT</span>
+            </div>
+          </div>
+          <div class="cta-group animate-in">
+            <a href="#why-property" class="cta-button cta-button--large">
+              Explore the Property
+              <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="#partner" class="cta-button cta-button--outline cta-button--large">Partner With Us</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Why This Property -->
+      <section class="section" data-section="why-property" id="why-property">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-label animate-in">Location & Market</span>
+            <h2 class="section-title animate-in">Why This Property</h2>
+            <div class="section-divider animate-in"></div>
+            <p class="section-subtitle animate-in">3 million sq ft of possibility in the center of the world's most powerful market.</p>
+          </div>
+          <div class="card-grid stagger-container">
+            <div class="card animate-in">
+              <span class="card-stat" data-counter data-target="7" data-suffix=" mi">0</span>
+              <span class="card-label">From Manhattan</span>
+              <p class="card-text">Direct access to the world's most iconic city and its 8.3 million residents.</p>
+            </div>
+            <div class="card animate-in">
+              <span class="card-stat" data-counter data-target="20" data-suffix="M+">0</span>
+              <span class="card-label">Metro Population</span>
+              <p class="card-text">The New York tri-state area — the largest consumer market in the United States.</p>
+            </div>
+            <div class="card animate-in">
+              <span class="card-stat">$0</span>
+              <span class="card-label">Sales Tax on Clothing</span>
+              <p class="card-text">New Jersey's zero sales tax on apparel and footwear drives cross-border shopping from New York and beyond.</p>
+            </div>
+            <div class="card animate-in">
+              <span class="card-stat" data-counter data-target="33" data-suffix="K">0</span>
+              <span class="card-label">Parking Spaces</span>
+              <p class="card-text">Massive parking infrastructure plus bus and rail transit connectivity from NYC.</p>
+            </div>
+            <div class="card animate-in">
+              <span class="card-stat" data-counter data-target="90" data-suffix="%">0</span>
+              <span class="card-label">Leased</span>
+              <p class="card-text">Strong and growing occupancy with continued tenant demand across all categories.</p>
+            </div>
+            <div class="card animate-in">
+              <span class="card-stat" data-counter data-target="55" data-suffix="%">0</span>
+              <span class="card-label">Entertainment</span>
+              <p class="card-text">More than half the property is dedicated to entertainment — a model that drives repeat visits.</p>
+            </div>
+          </div>
+          <div class="section-cta animate-in">
+            <div class="cta-group">
+              <a href="#retail" class="cta-button">Explore Retail <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+              <a href="#partner" class="cta-button cta-button--outline">Request Market Analysis</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Retail -->
+      <section class="section" data-section="retail" id="retail">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-label animate-in">Retail Environment</span>
+            <h2 class="section-title animate-in">The Retail<br>Environment</h2>
+            <div class="section-divider animate-in"></div>
+            <p class="section-subtitle animate-in">450+ brands across every category, anchored by world-class entertainment that drives foot traffic no standalone retailer could generate.</p>
+          </div>
+          <div class="placeholder-content animate-in">
+            <div class="placeholder-badge">Coming in Commit 4</div>
+            <p class="placeholder-text">Tenant showcase, category tiles, growth trajectory, and leasing CTA.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Luxury / The Avenue -->
+      <section class="section" data-section="luxury" id="luxury">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-label animate-in">Luxury</span>
+            <h2 class="section-title animate-in">The Avenue</h2>
+            <div class="section-divider animate-in"></div>
+            <p class="section-subtitle animate-in">A luxury destination inside a destination — curated, elevated, and unlike anything in the region.</p>
+          </div>
+          <div class="placeholder-content animate-in">
+            <div class="placeholder-badge">Coming in Commit 5</div>
+            <p class="placeholder-text">Immersive gallery, brand roster, luxury narrative, and consultation CTA.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Dining & Lifestyle -->
+      <section class="section" data-section="dining" id="dining">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-label animate-in">Culinary</span>
+            <h2 class="section-title animate-in">Dining & Lifestyle</h2>
+            <div class="section-divider animate-in"></div>
+            <p class="section-subtitle animate-in">Food isn't an afterthought. It's a lifestyle draw that brings people back every week.</p>
+          </div>
+          <div class="placeholder-content animate-in">
+            <div class="placeholder-badge">Coming in Commit 6</div>
+            <p class="placeholder-text">Cuisine categories, featured restaurants, food hall highlight, and F&B leasing inquiry.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Entertainment -->
+      <section class="section" data-section="entertainment" id="entertainment">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-label animate-in">Experience</span>
+            <h2 class="section-title animate-in">Attractions &<br>Entertainment</h2>
+            <div class="section-divider animate-in"></div>
+            <p class="section-subtitle animate-in">55% entertainment. This is what separates American Dream from every other property on the planet.</p>
+          </div>
+          <div class="placeholder-content animate-in">
+            <div class="placeholder-badge">Coming in Commit 7</div>
+            <p class="placeholder-text">Nickelodeon Universe, DreamWorks Water Park, Big SNOW deep-dives with expandable cards.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Events & Venues -->
+      <section class="section" data-section="events" id="events">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-label animate-in">Venues</span>
+            <h2 class="section-title animate-in">Events & Platform</h2>
+            <div class="section-divider animate-in"></div>
+            <p class="section-subtitle animate-in">A 3,000-seat performing arts center, world-class attractions, and a million square feet of activation space.</p>
+          </div>
+          <div class="placeholder-content animate-in">
+            <div class="placeholder-badge">Coming in Commit 8</div>
+            <p class="placeholder-text">Dream Live showcase, event categories, venue specs, and booking CTA.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Partner With Us -->
+      <section class="section" data-section="partner" id="partner">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-label animate-in">Take Action</span>
+            <h2 class="section-title animate-in">Partner With Us</h2>
+            <div class="section-divider animate-in"></div>
+            <p class="section-subtitle animate-in">Whether you're opening a flagship, launching a brand activation, or booking a world-class venue — let's build something extraordinary.</p>
+          </div>
+          <div class="placeholder-content animate-in">
+            <div class="placeholder-badge">Coming in Commit 10</div>
+            <p class="placeholder-text">Partnership paths, sponsorship tiers, AI Opportunity Brief generator, and contact form.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

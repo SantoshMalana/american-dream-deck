@@ -1,0 +1,137 @@
+/* ============================================================
+   LAYOUT.CSS — Main Layout Grid
+   American Dream Interactive Sales Deck
+   
+   Two-column layout: fixed sidebar + scrollable main content.
+   Sections are full-viewport panels, only one visible at a time.
+   ============================================================ */
+
+/* ── App Container ─────────────────────────────────────────── */
+.app {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: var(--sidebar-width);
+  height: 100dvh;
+  background-color: var(--color-bg-sidebar);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  transition: width var(--transition-normal);
+  overflow: hidden;
+}
+
+/* Sidebar collapsed state */
+.sidebar.collapsed {
+  width: var(--sidebar-collapsed);
+}
+
+.sidebar.collapsed .nav-text,
+.sidebar.collapsed .nav-header-text,
+.sidebar.collapsed .nav-footer-text {
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+/* ── Main Content ──────────────────────────────────────────── */
+.main-content {
+  margin-left: var(--sidebar-width);
+  height: 100dvh;
+  overflow-y: hidden;           /* sections handle own scroll */
+  position: relative;
+  transition: margin-left var(--transition-normal);
+}
+
+/* Adjust main content when sidebar is collapsed */
+.sidebar.collapsed ~ .main-content {
+  margin-left: var(--sidebar-collapsed);
+}
+
+/* ── Sections ──────────────────────────────────────────────── */
+.section {
+  display: none;
+  height: 100dvh;
+  overflow-y: auto;
+  padding: var(--section-padding);
+  position: relative;
+}
+
+.section.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Section Inner Wrapper ─────────────────────────────────── */
+.section-inner {
+  max-width: var(--section-max-width);
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Overlay (for mobile sidebar) ──────────────────────────── */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: hsla(0, 0%, 0%, 0.6);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.sidebar-overlay.visible {
+  opacity: 1;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal),
+                width var(--transition-normal);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay.visible {
+    display: block;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar.collapsed ~ .main-content {
+    margin-left: 0;
+  }
+
+  .section {
+    padding: var(--space-xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
