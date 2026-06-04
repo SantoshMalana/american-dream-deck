@@ -572,9 +572,59 @@
             <div class="section-divider animate-in"></div>
             <p class="section-subtitle animate-in">Whether you're opening a flagship, launching a brand activation, or booking a world-class venue — let's build something extraordinary.</p>
           </div>
-          <div class="placeholder-content animate-in">
-            <div class="placeholder-badge">Coming in Commit 10</div>
-            <p class="placeholder-text">Partnership paths, sponsorship tiers, AI Opportunity Brief generator, and contact form.</p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); margin-bottom: var(--space-3xl);" class="stagger-container">
+            <!-- Left Column: Paths & Contact -->
+            <div class="animate-in">
+              <h3 style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Let's Talk</h3>
+              <p style="color: var(--color-text-secondary); margin-bottom: var(--space-xl); line-height: 1.6;">Our leasing and partnerships team is ready to help you find the perfect footprint within American Dream.</p>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--space-md); margin-bottom: var(--space-2xl);">
+                <div class="card" style="padding: var(--space-md); cursor: pointer; border-color: var(--color-accent-subtle);">
+                  <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary);">Retail & Dining Leasing</div>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-muted);">Permanent storefronts and food hall concepts.</div>
+                </div>
+                <div class="card" style="padding: var(--space-md); cursor: pointer;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary);">The Avenue (Luxury)</div>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-muted);">Exclusive placement in our luxury wing.</div>
+                </div>
+                <div class="card" style="padding: var(--space-md); cursor: pointer;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary);">Sponsorships & Pop-Ups</div>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-muted);">Brand activations, naming rights, and temporary footprints.</div>
+                </div>
+              </div>
+
+              <a href="mailto:partnerships@americandream.com" class="cta-button">Email the Partnerships Team</a>
+            </div>
+
+            <!-- Right Column: AI Generator -->
+            <div class="animate-in" style="background: var(--color-surface); padding: var(--space-2xl); border-radius: 12px; border: 1px solid var(--color-border); position: relative; overflow: hidden;">
+              <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--color-accent), hsl(220, 70%, 60%));"></div>
+              
+              <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
+                <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; color: hsla(220, 20%, 6%, 1); font-size: 12px;">✨</div>
+                <h3 style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-accent);">AI Opportunity Brief</h3>
+              </div>
+              
+              <p style="color: var(--color-text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-xl); line-height: 1.6;">Tell us your brand or concept, and our AI will generate a custom pitch showing exactly how you fit into the American Dream ecosystem.</p>
+
+              <form id="ai-generator-form" style="display: flex; flex-direction: column; gap: var(--space-md);">
+                <input type="text" id="ai-brand-name" placeholder="e.g., A high-end sneaker boutique" required style="width: 100%; padding: var(--space-md); border-radius: 6px; border: 1px solid var(--color-border); background: var(--color-bg-primary); color: var(--color-text-primary); font-family: var(--font-body); font-size: var(--text-base); outline: none;">
+                
+                <button type="submit" class="cta-button" style="width: 100%; justify-content: center;" id="ai-generate-btn">
+                  <span>Generate Custom Brief</span>
+                </button>
+              </form>
+
+              <div id="ai-result-container" style="display: none; margin-top: var(--space-xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
+                <div id="ai-loading" style="display: none; text-align: center; color: var(--color-text-muted); font-size: var(--text-sm);">
+                  <div style="margin-bottom: var(--space-sm);">Analyzing synergy with American Dream...</div>
+                  <div class="loading-spinner" style="width: 24px; height: 24px; border: 2px solid var(--color-border); border-top-color: var(--color-accent); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+                  <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
+                </div>
+                <div id="ai-output" style="color: var(--color-text-primary); font-size: var(--text-sm); line-height: 1.6; white-space: pre-wrap; font-family: var(--font-body);"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
