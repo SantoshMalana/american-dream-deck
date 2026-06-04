@@ -64,6 +64,6 @@ Make the prospect feel like not being at American Dream is a missed opportunity.
     
   } catch (error) {
     console.error("Bedrock API Error:", error);
-    return res.status(500).json({ error: 'Failed to generate brief. Please try again later.' });
+    return res.status(500).json({ error: error.message || 'Failed to generate brief. Please try again later.' });
   }
 }
