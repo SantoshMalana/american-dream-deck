@@ -188,7 +188,9 @@
               <div style="font-family: var(--font-display); font-size: var(--text-2xl); color: #fff; font-style: italic;">The Avenue isn't a department in a mall.</div>
               <div style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-accent);">It's a destination inside a destination.</div>
             </div>
-              <div style="margin-bottom: var(--space-4xl);">
+          </div>
+
+          <div style="margin-bottom: var(--space-4xl);">
             <div class="hover-reveal-section animate-in stagger-1">
               <ul class="hover-reveal-list">
                 <li class="hover-reveal-item brand-1">Hermès</li>
@@ -199,7 +201,6 @@
                 <li class="hover-reveal-item brand-6">Balenciaga</li>
               </ul>
             </div>
-          </div>v>
           </div>
 
           <div class="section-cta animate-in">
@@ -239,10 +240,6 @@
 
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Dining Experiences</h3>
-            <div class="card-grid stagger-container">
-              <div class="card animate-in" style="border-left: 3px solid var(--color-accent);">
-                <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg></div>
-                <div class="card-title">Fine Dining</div>
             <div class="masonry-collage stagger-container">
             <div class="masonry-item animate-in stagger-1">
               <div>
@@ -306,39 +303,71 @@
       <!-- ENTERTAINMENT -->
       <section class="section" data-section="entertainment" id="entertainment">
         <div class="section-inner">
-          <div class="editorial-grid">
-            <div class="editorial-text-left animate-in">
-              <div class="floating-number">55</div>
-              <h2 class="massive-quote" style="margin-top: 40px;">More than half the property is dedicated to pure experience.</h2>
-              <p class="human-p-large">This is what separates American Dream from every other property on the planet.</p>
-              <p class="human-p">15+ major attractions. Weatherproof. Open 365 days a year. It's an engine that never stops driving foot traffic to the retail and dining wings.</p>
-              
-              <div class="minimal-stats">
-                <div class="minimal-stat-item">
-                  <div class="minimal-stat-value" style="color: #ff7a00;">Nickelodeon Universe</div>
-                  <div class="minimal-stat-label">Largest Indoor Theme Park in the Western Hemisphere</div>
-                </div>
-                <div class="minimal-stat-item">
-                  <div class="minimal-stat-value" style="color: #00a8e8;">DreamWorks Water Park</div>
-                  <div class="minimal-stat-label">Largest Indoor Water Park in North America</div>
-                </div>
-                <div class="minimal-stat-item">
-                  <div class="minimal-stat-value" style="color: #e0e0e0;">Big SNOW</div>
-                  <div class="minimal-stat-label">First Indoor Real-Snow Ski Resort in NA</div>
-                </div>
-              </div>
-            </div>
+          <div class="section-header">
+            <span class="section-label animate-in">Attractions</span>
+            <h2 class="section-title animate-in">Entertainment & Attractions</h2>
+            <div class="section-divider animate-in"></div>
+            <p class="section-subtitle animate-in">55% of American Dream is dedicated to entertainment. That's not a feature — it's the entire strategy.</p>
+          </div>
 
-            <div class="editorial-img-right animate-in stagger-2">
-              <div class="overlap-box" style="padding: 0; background: transparent; border: none;">
-                <video src="/videos/entertainment.mp4" autoplay loop muted playsinline class="editorial-img portrait" style="border-radius: 4px; object-fit: cover;"></video>
+          <!-- Full-width cinematic video banner -->
+          <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 16px; overflow: hidden; position: relative;">
+            <video src="/videos/entertainment.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block;"></video>
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, hsla(225, 25%, 5%, 0.7) 0%, transparent 40%, hsla(225, 25%, 5%, 0.6) 100%);"></div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-2xl);">
+              <div style="display: flex; gap: var(--space-3xl); align-items: flex-end; flex-wrap: wrap;">
+                <div>
+                  <span class="card-stat" style="font-size: var(--text-3xl);" data-counter data-target="15" data-suffix="+">0</span>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Major Attractions</div>
+                </div>
+                <div>
+                  <span class="card-stat" style="font-size: var(--text-3xl);">365</span>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Days a Year</div>
+                </div>
+                <div>
+                  <span class="card-stat" style="font-size: var(--text-3xl);">3×</span>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Longer Dwell Time</div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="section-cta animate-in" style="margin-top: var(--space-4xl);">
+          <!-- Attraction Showcase -->
+          <div style="margin-bottom: var(--space-3xl);">
+            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">World-Class Attractions</h3>
+            <div class="masonry-collage stagger-container">
+              <div class="masonry-item animate-in stagger-1" style="border-left: 4px solid #ff7a00;">
+                <div>
+                  <div class="masonry-title" style="color: #ff7a00;">Nickelodeon Universe</div>
+                  <p class="card-text">The largest indoor theme park in the Western Hemisphere. 35 acres of rides, roller coasters, and immersive Nickelodeon-themed experiences — all climate-controlled and open year-round.</p>
+                  <div style="margin-top: var(--space-lg); display: flex; gap: var(--space-xl); flex-wrap: wrap;">
+                    <div><span style="font-family: var(--font-display); font-size: var(--text-xl); color: #ff7a00;">8.5</span> <span style="font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Acres</span></div>
+                    <div><span style="font-family: var(--font-display); font-size: var(--text-xl); color: #ff7a00;">27</span> <span style="font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Rides</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry-item animate-in stagger-2" style="border-left: 4px solid #00a8e8;">
+                <div class="masonry-title" style="color: #00a8e8;">DreamWorks Water Park</div>
+                <p class="card-text">The largest indoor water park in North America. Wave pools, lazy rivers, 15+ water slides, and a tropical 84°F year-round climate.</p>
+              </div>
+              <div class="masonry-item animate-in stagger-3" style="border-left: 4px solid #e0e0e0;">
+                <div class="masonry-title">Big SNOW</div>
+                <p class="card-text">The first indoor, real-snow ski and snowboard resort in North America. 160,000 sq ft of real snow, 16 stories high. Year-round winter sports 7 miles from Times Square.</p>
+              </div>
+              <div class="masonry-item animate-in stagger-4" style="border-left: 4px solid hsl(280, 70%, 60%);">
+                <div style="font-family: var(--font-display); font-size: 3rem; color: hsl(280, 70%, 60%); line-height: 1;">+ More</div>
+                <div>
+                  <div class="masonry-title">SEA LIFE · LEGOLAND · Angry Birds Mini Golf · Mirror Maze · Ice Rink</div>
+                  <p class="card-text">Every one of these attractions drives foot traffic directly past retail and dining tenants. That's by design.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-cta animate-in" style="margin-top: var(--space-3xl);">
             <div class="cta-group">
-              <a href="#partner" class="cta-button">Sponsorship Opportunities <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+              <a href="#events" class="cta-button">Explore Venues & Events <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+              <a href="#sponsorship" class="cta-button cta-button--outline">Sponsorship Opportunities</a>
             </div>
           </div>
         </div>
@@ -351,7 +380,7 @@
             <span class="section-label animate-in">Venues</span>
             <h2 class="section-title animate-in">Events & Platform</h2>
             <div class="section-divider animate-in"></div>
-            <p class="section-subtitle animate-in">A 3,000-seat performing arts center, world-class attractions, and a million square feet of activation space.</p>
+            <p class="section-subtitle animate-in">American Dream isn't just a building. It's a platform — for launches, activations, concerts, and moments that make headlines.</p>
           </div>
 
           <div class="animate-in" style="margin-bottom: var(--space-3xl); border-radius: 16px; overflow: hidden; position: relative;">
@@ -363,42 +392,134 @@
             </div>
           </div>
 
-          <div style="margin-bottom: var(--space-3xl);">
-            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Event Capabilities</h3>
-          <div class="filmstrip-wrapper">
-            <div class="filmstrip-container stagger-container">
-              <div class="filmstrip-item animate-in stagger-1">
-                <div class="filmstrip-number">01</div>
-                <div class="filmstrip-title">Live Concerts & Tours</div>
-                <p class="card-text">Fully equipped stage, lighting, and sound for national touring acts and exclusive residencies in an intimate 3,000-seat setting.</p>
+          <!-- Venue-Specific Detail -->
+          <div class="editorial-grid animate-in" style="margin-bottom: var(--space-3xl);">
+            <div class="editorial-text-left">
+              <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-text-primary); margin-bottom: var(--space-lg);">Dream Live Performing Arts Center</h3>
+              <p class="human-p">A state-of-the-art, 3,000-seat performing arts venue built for national touring acts, exclusive residencies, and premium corporate events. World-class acoustics, fully customizable staging, and VIP hospitality suites.</p>
+              <div class="minimal-stats" style="margin-top: var(--space-xl);">
+                <div class="minimal-stat-item">
+                  <div class="minimal-stat-value" data-counter data-target="3000" data-suffix="">0</div>
+                  <div class="minimal-stat-label">Seat Capacity</div>
+                </div>
+                <div class="minimal-stat-item">
+                  <div class="minimal-stat-value">VIP</div>
+                  <div class="minimal-stat-label">Hospitality Suites & Green Room</div>
+                </div>
               </div>
-              <div class="filmstrip-item animate-in stagger-2">
-                <div class="filmstrip-number">02</div>
-                <div class="filmstrip-title">Corporate & Conferences</div>
-                <p class="card-text">Customizable event spaces with the ability to rent entire attractions for unforgettable corporate retreats and product launches.</p>
-              </div>
-              <div class="filmstrip-item animate-in stagger-3">
-                <div class="filmstrip-number">03</div>
-                <div class="filmstrip-title">Brand Activations</div>
-                <p class="card-text">High-traffic concourses and grand courts for experiential marketing, immersive pop-ups, and interactive installations reaching 40M+ visitors.</p>
-              </div>
-              <div class="filmstrip-item animate-in stagger-4">
-                <div class="filmstrip-number">04</div>
-                <div class="filmstrip-title">Theme Park Buyouts</div>
-                <p class="card-text">Host up to 5,000 guests in the Nickelodeon Universe with customized branding and exclusive access.</p>
-              </div>
-              <div class="filmstrip-item animate-in stagger-5">
-                <div class="filmstrip-number">05</div>
-                <div class="filmstrip-title">Water Park Buyouts</div>
-                <p class="card-text">Tropical climate year-round. Perfect for VIP winter escapes without leaving the tri-state area.</p>
+            </div>
+            <div class="editorial-img-right">
+              <div class="overlap-box">
+                <div style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-md);">"The intimacy of a jazz club with the infrastructure of Madison Square Garden."</div>
+                <div style="font-size: var(--text-sm); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em;">— Venue Overview</div>
               </div>
             </div>
           </div>
+
+          <div style="margin-bottom: var(--space-3xl);">
+            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Event Capabilities</h3>
+            <div class="filmstrip-wrapper">
+              <div class="filmstrip-container stagger-container">
+                <div class="filmstrip-item animate-in stagger-1">
+                  <div class="filmstrip-number">01</div>
+                  <div class="filmstrip-title">Live Concerts & Tours</div>
+                  <p class="card-text">Fully equipped stage, lighting, and sound for national touring acts and exclusive residencies in an intimate 3,000-seat setting.</p>
+                </div>
+                <div class="filmstrip-item animate-in stagger-2">
+                  <div class="filmstrip-number">02</div>
+                  <div class="filmstrip-title">Corporate & Conferences</div>
+                  <p class="card-text">Customizable event spaces with the ability to rent entire attractions for unforgettable corporate retreats and product launches.</p>
+                </div>
+                <div class="filmstrip-item animate-in stagger-3">
+                  <div class="filmstrip-number">03</div>
+                  <div class="filmstrip-title">Brand Activations</div>
+                  <p class="card-text">High-traffic concourses and grand courts for experiential marketing, immersive pop-ups, and interactive installations reaching 40M+ visitors.</p>
+                </div>
+                <div class="filmstrip-item animate-in stagger-4">
+                  <div class="filmstrip-number">04</div>
+                  <div class="filmstrip-title">Theme Park Buyouts</div>
+                  <p class="card-text">Host up to 5,000 guests in the Nickelodeon Universe with customized branding and exclusive access.</p>
+                </div>
+                <div class="filmstrip-item animate-in stagger-5">
+                  <div class="filmstrip-number">05</div>
+                  <div class="filmstrip-title">Water Park Buyouts</div>
+                  <p class="card-text">Tropical climate year-round. Perfect for VIP winter escapes without leaving the tri-state area.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="section-cta animate-in">
             <div class="cta-group">
               <a href="#partner" class="cta-button">Book an Event or Venue <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+              <a href="#sponsorship" class="cta-button cta-button--outline">Sponsorship Tiers</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPONSORSHIP -->
+      <section class="section full-bleed" data-section="sponsorship" id="sponsorship" style="background: var(--color-bg-secondary); padding: var(--space-4xl) 0;">
+        <div class="section-inner" style="padding: 0 var(--space-2xl);">
+          <div class="section-header">
+            <span class="section-label animate-in">Partnerships</span>
+            <h2 class="section-title animate-in">Sponsorship & Brand Partnerships</h2>
+            <div class="section-divider animate-in"></div>
+            <p class="section-subtitle animate-in">40 million annual visitors. One platform. Infinite ways to activate your brand at the intersection of retail, entertainment, and culture.</p>
+          </div>
+
+          <div class="editorial-grid animate-in" style="margin-bottom: var(--space-3xl);">
+            <div class="editorial-text-left">
+              <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-text-primary); margin-bottom: var(--space-lg);">Why Brands Activate Here</h3>
+              <p class="human-p">American Dream combines the foot traffic of Times Square with the dwell time of a theme park. Your brand doesn't just get impressions — it gets immersion. Guests spend an average of 4+ hours per visit. That's not foot traffic. That's a captive, engaged audience ready to interact with your brand.</p>
+              <div class="minimal-stats" style="margin-top: var(--space-xl);">
+                <div class="minimal-stat-item">
+                  <div class="minimal-stat-value" data-counter data-target="40" data-suffix="M+">0</div>
+                  <div class="minimal-stat-label">Annual Visitor Impressions</div>
+                </div>
+                <div class="minimal-stat-item">
+                  <div class="minimal-stat-value">4+ hrs</div>
+                  <div class="minimal-stat-label">Average Dwell Time</div>
+                </div>
+                <div class="minimal-stat-item">
+                  <div class="minimal-stat-value">$125K+</div>
+                  <div class="minimal-stat-label">Avg Household Income (20mi radius)</div>
+                </div>
+              </div>
+            </div>
+            <div class="editorial-img-right">
+              <div class="overlap-box">
+                <div style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-md);">"We don't sell ad space. We create moments that people remember."</div>
+                <div style="font-size: var(--text-sm); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em;">— Partnerships Team</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partnership Tiers -->
+          <div style="margin-bottom: var(--space-3xl);">
+            <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Partnership Tiers</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl);" class="stagger-container">
+              <div class="card animate-in" style="border-top: 3px solid var(--color-accent); text-align: center;">
+                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: var(--space-md);">Presenting</div>
+                <div class="card-title" style="font-size: var(--text-2xl);">Title Sponsor</div>
+                <p class="card-text" style="margin-top: var(--space-md);">Full property naming rights for events, signage throughout the complex, exclusive digital and physical media placements, and dedicated activation zones.</p>
+              </div>
+              <div class="card animate-in" style="border-top: 3px solid hsl(220, 70%, 60%); text-align: center;">
+                <div style="font-size: var(--text-xs); color: hsl(220, 70%, 60%); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: var(--space-md);">Premium</div>
+                <div class="card-title" style="font-size: var(--text-2xl);">Category Partner</div>
+                <p class="card-text" style="margin-top: var(--space-md);">Exclusive category rights (automotive, tech, fashion), branded lounge areas, co-branded events, and preferential media placements across the property.</p>
+              </div>
+              <div class="card animate-in" style="border-top: 3px solid hsl(152, 60%, 48%); text-align: center;">
+                <div style="font-size: var(--text-xs); color: hsl(152, 60%, 48%); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: var(--space-md);">Experiential</div>
+                <div class="card-title" style="font-size: var(--text-2xl);">Pop-Up & Activation</div>
+                <p class="card-text" style="margin-top: var(--space-md);">Short-term immersive brand experiences in high-traffic zones. Ideal for product launches, seasonal campaigns, and influencer-driven activations.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-cta animate-in">
+            <div class="cta-group">
+              <a href="#partner" class="cta-button">Start a Partnership Conversation <span class="cta-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
             </div>
           </div>
         </div>
@@ -471,6 +592,8 @@
             <a href="#luxury">The Avenue</a>
             <a href="#dining">Dining</a>
             <a href="#entertainment">Entertainment</a>
+            <a href="#events">Events</a>
+            <a href="#sponsorship">Sponsorship</a>
             <a href="#partner">Partner</a>
           </div>
           <div class="footer-legal">
