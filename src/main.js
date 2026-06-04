@@ -1,6 +1,7 @@
 import { Router } from './utils/router.js';
 import { SidebarNav } from './components/sidebar-nav.js';
 import { LoadingScreen } from './components/loading-screen.js';
+import { StatCounter } from './components/stat-counter.js';
 
 class App {
   constructor() {
@@ -47,6 +48,12 @@ class App {
       animateElements.forEach((el, i) => {
         setTimeout(() => el.classList.add('visible'), i * 100 + 200);
       });
+      
+      // Initialize counters
+      setTimeout(() => {
+        const counters = StatCounter.initAll(section);
+        counters.forEach(c => c.animate());
+      }, 500);
     }
   }
 }
