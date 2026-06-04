@@ -132,6 +132,12 @@
 
 @media (max-width: 640px) {
   .section {
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--section-padding) var(--space-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: var(--sidebar-collapsed);
   }
 }
