@@ -97,14 +97,23 @@ class App {
       loadingEl.style.display = 'block';
 
       try {
-        const res = await fetch('/api/generate-brief', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ brandName })
-        });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || 'Generation failed');
-        outputEl.textContent = data.brief;
+        // Mocking the AI response for the static Vercel deployment
+        await new Promise(resolve => setTimeout(resolve, 2500));
+        
+        const mockBrief = `OPPORTUNITY BRIEF: ${brandName.toUpperCase()} x AMERICAN DREAM
+
+1. THE VISION
+Position ${brandName} at the epicenter of global retail and entertainment. By anchoring your next flagship at American Dream, you aren't just opening a store—you are creating an immersive brand embassy accessible to 40M+ annual visitors.
+
+2. THE ACTIVATION
+Leverage our 1M+ sq ft of activation space. Imagine a ${brandName} takeover of the DreamWorks Water Park for a VIP product launch, seamlessly bridging experiential marketing with direct retail conversion.
+
+3. THE AUDIENCE
+Tap into a highly affluent, captive audience with a dwell time 3x higher than traditional retail centers. 
+
+Next Step: Let's schedule a site tour to view the premier corner-cap locations in The Avenue.`;
+
+        outputEl.textContent = mockBrief;
         loadingEl.style.display = 'none';
         outputEl.style.display = 'block';
       } catch (err) {
