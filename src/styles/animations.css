@@ -1,56 +1,98 @@
-/* Keyframes */
+/* ================================================================
+   ANIMATIONS — Ultra-Premium Sales Deck
+   GPU-accelerated keyframes & entrance orchestration
+   ================================================================ */
+
+/* ------------------------------------------------------------------
+   Keyframes
+   ------------------------------------------------------------------ */
+
 @keyframes fadeIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translate3d(0, 30px, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @keyframes fadeInLeft {
-  from { opacity: 0; transform: translate3d(-30px, 0, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-@keyframes slideInRight {
-  from { transform: translate3d(100%, 0, 0); }
-  to { transform: translate3d(0, 0, 0); }
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @keyframes scaleIn {
-  from { transform: scale(0.92); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
+  0%   { background-position: -200% 0; }
   100% { background-position: 200% 0; }
-}
-
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 hsla(38, 85%, 55%, 0.4); }
-  50% { box-shadow: 0 0 20px 4px hsla(38, 85%, 55%, 0.15); }
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50%      { transform: translateY(-8px); }
 }
 
-/* Animate-in system: elements start hidden, reveal on visible */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+@keyframes goldGlow {
+  0%, 100% { box-shadow: 0 0 20px hsla(38, 80%, 55%, 0.05); }
+  50%      { box-shadow: 0 0 40px hsla(38, 80%, 55%, 0.15); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ------------------------------------------------------------------
+   Entrance animation base — .animate-in
+   ------------------------------------------------------------------ */
+
 .animate-in {
   opacity: 0;
-  transform: translate3d(0, 24px, 0);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 30px, 0);
+  transition:
+    opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
   will-change: opacity, transform;
 }
 
@@ -59,12 +101,31 @@
   transform: translate3d(0, 0, 0);
 }
 
-/* Stagger delays */
-.stagger-1 { transition-delay: 80ms; }
-.stagger-2 { transition-delay: 160ms; }
-.stagger-3 { transition-delay: 240ms; }
-.stagger-4 { transition-delay: 320ms; }
-.stagger-5 { transition-delay: 400ms; }
-.stagger-6 { transition-delay: 480ms; }
-.stagger-7 { transition-delay: 560ms; }
-.stagger-8 { transition-delay: 640ms; }
+
+/* ------------------------------------------------------------------
+   Stagger orchestration
+   Each successive child inside .stagger-container gets an
+   additional 80 ms delay so elements cascade in gracefully.
+   ------------------------------------------------------------------ */
+
+.stagger-container .animate-in:nth-child(1) { transition-delay: 0s; }
+.stagger-container .animate-in:nth-child(2) { transition-delay: 0.08s; }
+.stagger-container .animate-in:nth-child(3) { transition-delay: 0.16s; }
+.stagger-container .animate-in:nth-child(4) { transition-delay: 0.24s; }
+.stagger-container .animate-in:nth-child(5) { transition-delay: 0.32s; }
+.stagger-container .animate-in:nth-child(6) { transition-delay: 0.40s; }
+.stagger-container .animate-in:nth-child(7) { transition-delay: 0.48s; }
+.stagger-container .animate-in:nth-child(8) { transition-delay: 0.56s; }
+
+
+/* ------------------------------------------------------------------
+   Accessibility — Reduced motion
+   ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    opacity: 1;
+    transform: none;
+    transition-duration: 0.01ms !important;
+  }
+}

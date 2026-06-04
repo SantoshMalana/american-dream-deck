@@ -1,46 +1,94 @@
-/* Section Header */
+/* ================================================================
+   SECTIONS — Ultra-Premium Sales Deck
+   Luxury section chrome: labels, titles, dividers, CTAs
+   ================================================================ */
+
+/* ------------------------------------------------------------------
+   Section header group
+   ------------------------------------------------------------------ */
+
 .section-header {
+  position: relative;
   margin-bottom: var(--space-3xl);
 }
 
+
+/* ------------------------------------------------------------------
+   Label pill — small uppercase accent tag
+   ------------------------------------------------------------------ */
+
 .section-label {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
   font-family: var(--font-body);
   font-size: var(--text-xs);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   color: var(--color-accent);
-  margin-bottom: var(--space-md);
-  padding: 4px 12px;
-  background: hsla(38, 85%, 55%, 0.08);
-  border-radius: 4px;
-  border: 1px solid hsla(38, 85%, 55%, 0.15);
+  margin-bottom: var(--space-lg);
+  padding: 6px 16px;
+  background: hsla(38, 50%, 50%, 0.06);
+  border: 1px solid hsla(38, 50%, 50%, 0.15);
+  border-radius: 100px;
 }
+
+.section-label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+
+/* ------------------------------------------------------------------
+   Title
+   ------------------------------------------------------------------ */
 
 .section-title {
   font-family: var(--font-display);
-  font-size: var(--text-4xl);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  font-weight: 600;
   color: var(--color-text-primary);
   line-height: 1.15;
-  margin-bottom: var(--space-lg);
-  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-md);
 }
+
+
+/* ------------------------------------------------------------------
+   Divider — thin gold gradient rule
+   ------------------------------------------------------------------ */
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-gold);
+  border-radius: 2px;
+  margin-bottom: var(--space-xl);
+}
+
+
+/* ------------------------------------------------------------------
+   Subtitle
+   ------------------------------------------------------------------ */
 
 .section-subtitle {
   font-size: var(--text-lg);
   color: var(--color-text-secondary);
   line-height: 1.7;
-  max-width: 680px;
+  max-width: 650px;
+  font-weight: 300;
 }
 
-.section-divider {
-  width: 50px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-accent), transparent);
-  margin: var(--space-lg) 0;
-  border: none;
-}
+
+/* ------------------------------------------------------------------
+   CTA area — separated by a soft border-top
+   ------------------------------------------------------------------ */
 
 .section-cta {
   margin-top: var(--space-3xl);
@@ -48,71 +96,30 @@
   border-top: 1px solid var(--color-border);
 }
 
-.section-body {
-  flex: 1;
+
+/* ------------------------------------------------------------------
+   Images inside sections — unified rounded corners
+   ------------------------------------------------------------------ */
+
+.section-inner img {
+  border-radius: 16px;
 }
 
-/* Stats Row */
-.stats-row {
-  display: flex;
-  gap: var(--space-2xl);
-  flex-wrap: wrap;
-  margin: var(--space-2xl) 0;
-}
 
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
+/* ------------------------------------------------------------------
+   Responsive typography
+   ------------------------------------------------------------------ */
 
-.stat-value {
-  font-family: var(--font-display);
-  font-size: var(--text-3xl);
-  font-weight: 700;
-  color: var(--color-accent);
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--color-text-muted);
-}
-
-/* Section background gradient */
-.section-bg-gradient {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background: radial-gradient(
-    ellipse 60% 50% at 80% 20%,
-    hsla(38, 85%, 55%, 0.03) 0%,
-    transparent 70%
-  );
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .section-title {
-    font-size: var(--text-3xl);
-  }
-  .section-subtitle {
-    font-size: var(--text-base);
-  }
-}
-
-@media (max-width: 640px) {
-  .section-header {
-    margin-bottom: var(--space-2xl);
-  }
+@media (max-width: 768px) {
   .section-title {
     font-size: var(--text-2xl);
   }
-  .stats-row {
-    flex-direction: column;
-    gap: var(--space-lg);
+
+  .section-subtitle {
+    font-size: var(--text-base);
+  }
+
+  .hero-title {
+    font-size: var(--text-3xl);
   }
 }

@@ -1,59 +1,71 @@
 /* ============================================================
-   TOKENS.CSS — Design Token System
+   TOKENS.CSS — Luxury Design Token System
    American Dream Interactive Sales Deck
    
-   Single source of truth for all visual primitives.
-   Every color, size, and timing value used across the deck
-   is defined here as a CSS custom property.
+   A refined, hand-crafted token palette built around
+   deep obsidian blacks, champagne gold accents, and
+   warm ivory typography. Every value is intentional.
    ============================================================ */
 
 :root {
-  /* ── Core Palette ── dark luxury with warm accents ────────── */
-  --color-bg-primary:     hsl(220, 20%, 6%);
-  --color-bg-secondary:   hsl(220, 18%, 10%);
-  --color-bg-sidebar:     hsl(220, 22%, 8%);
-  --color-surface:        hsl(220, 15%, 14%);
-  --color-surface-hover:  hsl(220, 15%, 18%);
-  --color-border:         hsl(220, 12%, 20%);
+  /* ── Core Palette ── obsidian + blue undertone ────────────── */
+  --color-bg-primary:     hsl(225, 25%, 5%);
+  --color-bg-secondary:   hsl(225, 22%, 8%);
+  --color-bg-sidebar:     hsl(225, 28%, 6%);
+  --color-surface:        hsl(225, 18%, 12%);
+  --color-surface-hover:  hsl(225, 18%, 16%);
+  --color-border:         hsla(38, 30%, 40%, 0.15);
 
-  /* ── Text Hierarchy ──────────────────────────────────────── */
-  --color-text-primary:   hsl(0, 0%, 95%);
-  --color-text-secondary: hsl(220, 10%, 65%);
-  --color-text-muted:     hsl(220, 8%, 45%);
+  /* ── Text Hierarchy ── warm whites, not cold ──────────────── */
+  --color-text-primary:   hsl(40, 20%, 95%);
+  --color-text-secondary: hsl(225, 15%, 58%);
+  --color-text-muted:     hsl(225, 10%, 40%);
 
-  /* ── Accent — warm gold (luxury, aspiration) ─────────────── */
-  --color-accent:         hsl(38, 85%, 55%);
-  --color-accent-hover:   hsl(38, 90%, 62%);
-  --color-accent-subtle:  hsl(38, 40%, 20%);
+  /* ── Accent — champagne gold ──────────────────────────────── */
+  --color-accent:         hsl(38, 75%, 55%);
+  --color-accent-hover:   hsl(38, 80%, 62%);
+  --color-accent-subtle:  hsla(38, 50%, 50%, 0.08);
+  --color-accent-glow:    hsla(38, 80%, 55%, 0.12);
 
   /* ── Semantic ────────────────────────────────────────────── */
-  --color-success:        hsl(152, 60%, 48%);
-  --color-cta:            hsl(38, 85%, 55%);
+  --color-success:        hsl(152, 55%, 45%);
+  --color-cta:            hsl(38, 75%, 55%);
+
+  /* ── Glassmorphism ────────────────────────────────────────── */
+  --color-glass:          hsla(225, 20%, 15%, 0.6);
+  --color-glass-border:   hsla(38, 30%, 50%, 0.1);
+  --blur-glass:           20px;
+
+  /* ── Gradients ────────────────────────────────────────────── */
+  --gradient-luxury:  linear-gradient(135deg, hsl(225, 25%, 5%) 0%, hsl(225, 20%, 10%) 50%, hsl(225, 25%, 5%) 100%);
+  --gradient-gold:    linear-gradient(135deg, hsl(38, 75%, 55%), hsl(32, 85%, 48%), hsl(38, 75%, 55%));
+  --gradient-text:    linear-gradient(135deg, hsl(40, 20%, 95%), hsl(38, 60%, 70%));
 
   /* ── Typography ──────────────────────────────────────────── */
   --font-display:  'Playfair Display', Georgia, serif;
   --font-body:     'Inter', system-ui, sans-serif;
+  --font-mono:     'JetBrains Mono', 'SF Mono', monospace;
 
   /* ── Type Scale (1.25 ratio) ─────────────────────────────── */
-  --text-xs:    0.75rem;    /*  12px */
-  --text-sm:    0.875rem;   /*  14px */
-  --text-base:  1rem;       /*  16px */
-  --text-lg:    1.25rem;    /*  20px */
-  --text-xl:    1.563rem;   /*  25px */
-  --text-2xl:   1.953rem;   /*  31px */
-  --text-3xl:   2.441rem;   /*  39px */
-  --text-4xl:   3.052rem;   /*  49px */
-  --text-hero:  4.5rem;     /*  72px */
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.25rem;
+  --text-xl:    1.563rem;
+  --text-2xl:   1.953rem;
+  --text-3xl:   2.441rem;
+  --text-4xl:   3.052rem;
+  --text-hero:  4.5rem;
 
   /* ── Spacing ─────────────────────────────────────────────── */
-  --space-xs:   0.25rem;    /*   4px */
-  --space-sm:   0.5rem;     /*   8px */
-  --space-md:   1rem;       /*  16px */
-  --space-lg:   1.5rem;     /*  24px */
-  --space-xl:   2rem;       /*  32px */
-  --space-2xl:  3rem;       /*  48px */
-  --space-3xl:  4rem;       /*  64px */
-  --space-4xl:  6rem;       /*  96px */
+  --space-xs:   0.25rem;
+  --space-sm:   0.5rem;
+  --space-md:   1rem;
+  --space-lg:   1.5rem;
+  --space-xl:   2rem;
+  --space-2xl:  3rem;
+  --space-3xl:  4rem;
+  --space-4xl:  6rem;
 
   /* ── Layout ──────────────────────────────────────────────── */
   --sidebar-width:     280px;
@@ -65,12 +77,15 @@
   --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* ── Shadows ─────────────────────────────────────────────── */
   --shadow-sm:   0 1px 3px hsla(0, 0%, 0%, 0.3);
   --shadow-md:   0 4px 12px hsla(0, 0%, 0%, 0.4);
   --shadow-lg:   0 8px 30px hsla(0, 0%, 0%, 0.5);
-  --shadow-glow: 0 0 40px hsla(38, 85%, 55%, 0.15);
+  --shadow-xl:   0 20px 60px hsla(0, 0%, 0%, 0.6);
+  --shadow-glow: 0 0 40px hsla(38, 80%, 55%, 0.12);
+  --shadow-gold: 0 0 60px hsla(38, 80%, 55%, 0.08);
 
   /* ── Transitions ─────────────────────────────────────────── */
   --transition-fast:   150ms var(--ease-out-quart);
