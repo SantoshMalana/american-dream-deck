@@ -267,26 +267,26 @@
 
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Featured</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);" class="stagger-container">
-              <div class="card animate-in" style="text-align: center;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">Carpaccio</div>
-                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm);">Upscale Italian</div>
-                <p class="card-text" style="font-size: var(--text-sm);">The Avenue's anchor restaurant — raw bar, seafood, housemade pastas, and an ambiance that matches the luxury wing.</p>
+            <div class="featured-grid stagger-container">
+              <div class="featured-card animate-in">
+                <div class="featured-name">Carpaccio</div>
+                <div class="featured-type">Upscale Italian</div>
+                <p class="featured-desc">The Avenue's anchor restaurant — raw bar, seafood, housemade pastas, and an ambiance that matches the luxury wing.</p>
               </div>
-              <div class="card animate-in" style="text-align: center;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">Yard House</div>
-                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm);">American Craft</div>
-                <p class="card-text" style="font-size: var(--text-sm);">100+ craft beers on tap and an American-style menu that serves as a social anchor for the property.</p>
+              <div class="featured-card animate-in">
+                <div class="featured-name">Yard House</div>
+                <div class="featured-type">American Craft</div>
+                <p class="featured-desc">100+ craft beers on tap and an American-style menu that serves as a social anchor for the property.</p>
               </div>
-              <div class="card animate-in" style="text-align: center;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">H Mart</div>
-                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm);">Korean Market</div>
-                <p class="card-text" style="font-size: var(--text-sm);">A full Korean food hall and grocery experience — authentic Asian market culture inside the property.</p>
+              <div class="featured-card animate-in">
+                <div class="featured-name">H Mart</div>
+                <div class="featured-type">Korean Market</div>
+                <p class="featured-desc">A full Korean food hall and grocery experience — authentic Asian market culture inside the property.</p>
               </div>
-              <div class="card animate-in" style="text-align: center;">
-                <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text-primary); margin-bottom: var(--space-xs);">Lady M</div>
-                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm);">Boutique Bakery</div>
-                <p class="card-text" style="font-size: var(--text-sm);">Signature mille crêpe cakes in a jewel-box setting — a dessert destination that drives foot traffic on its own.</p>
+              <div class="featured-card animate-in">
+                <div class="featured-name">Lady M</div>
+                <div class="featured-type">Boutique Bakery</div>
+                <p class="featured-desc">Signature mille crêpe cakes in a jewel-box setting — a dessert destination that drives foot traffic on its own.</p>
               </div>
             </div>
           </div>
@@ -335,31 +335,35 @@
           <!-- Attraction Showcase -->
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">World-Class Attractions</h3>
-            <div class="masonry-collage stagger-container">
-              <div class="masonry-item animate-in stagger-1" style="border-left: 4px solid #ff7a00;">
-                <div>
-                  <div class="masonry-title" style="color: #ff7a00;">Nickelodeon Universe</div>
-                  <p class="card-text">The largest indoor theme park in the Western Hemisphere. 35 acres of rides, roller coasters, and immersive Nickelodeon-themed experiences — all climate-controlled and open year-round.</p>
-                  <div style="margin-top: var(--space-lg); display: flex; gap: var(--space-xl); flex-wrap: wrap;">
-                    <div><span style="font-family: var(--font-display); font-size: var(--text-xl); color: #ff7a00;">8.5</span> <span style="font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Acres</span></div>
-                    <div><span style="font-family: var(--font-display); font-size: var(--text-xl); color: #ff7a00;">27</span> <span style="font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Rides</span></div>
-                  </div>
+            <div class="attraction-grid stagger-container">
+              <div class="attraction-card animate-in" style="--attraction-color: #ff7a00;">
+                <div class="attraction-name">Nickelodeon Universe</div>
+                <p class="attraction-desc">The largest indoor theme park in the Western Hemisphere. 35 acres of rides, roller coasters, and immersive Nickelodeon-themed experiences — all climate-controlled and open year-round.</p>
+                <div class="attraction-stats">
+                  <div><span class="attraction-stat-value">8.5</span> <span class="attraction-stat-label">Acres</span></div>
+                  <div><span class="attraction-stat-value">27</span> <span class="attraction-stat-label">Rides</span></div>
+                  <div><span class="attraction-stat-value">5K</span> <span class="attraction-stat-label">Capacity</span></div>
                 </div>
               </div>
-              <div class="masonry-item animate-in stagger-2" style="border-left: 4px solid #00a8e8;">
-                <div class="masonry-title" style="color: #00a8e8;">DreamWorks Water Park</div>
-                <p class="card-text">The largest indoor water park in North America. Wave pools, lazy rivers, 15+ water slides, and a tropical 84°F year-round climate.</p>
-              </div>
-              <div class="masonry-item animate-in stagger-3" style="border-left: 4px solid #e0e0e0;">
-                <div class="masonry-title">Big SNOW</div>
-                <p class="card-text">The first indoor, real-snow ski and snowboard resort in North America. 160,000 sq ft of real snow, 16 stories high. Year-round winter sports 7 miles from Times Square.</p>
-              </div>
-              <div class="masonry-item animate-in stagger-4" style="border-left: 4px solid hsl(280, 70%, 60%);">
-                <div style="font-family: var(--font-display); font-size: 3rem; color: hsl(280, 70%, 60%); line-height: 1;">+ More</div>
-                <div>
-                  <div class="masonry-title">SEA LIFE · LEGOLAND · Angry Birds Mini Golf · Mirror Maze · Ice Rink</div>
-                  <p class="card-text">Every one of these attractions drives foot traffic directly past retail and dining tenants. That's by design.</p>
+              <div class="attraction-card animate-in" style="--attraction-color: #00a8e8;">
+                <div class="attraction-name">DreamWorks Water Park</div>
+                <p class="attraction-desc">The largest indoor water park in North America. Wave pools, lazy rivers, 15+ water slides, and a tropical 84°F year-round climate.</p>
+                <div class="attraction-stats">
+                  <div><span class="attraction-stat-value">84°F</span> <span class="attraction-stat-label">Year-Round</span></div>
+                  <div><span class="attraction-stat-value">15+</span> <span class="attraction-stat-label">Slides</span></div>
                 </div>
+              </div>
+              <div class="attraction-card animate-in" style="--attraction-color: #e0e0e0;">
+                <div class="attraction-name">Big SNOW</div>
+                <p class="attraction-desc">The first indoor, real-snow ski and snowboard resort in North America. 160,000 sq ft of real snow, 16 stories high.</p>
+                <div class="attraction-stats">
+                  <div><span class="attraction-stat-value">160K</span> <span class="attraction-stat-label">Sq Ft</span></div>
+                  <div><span class="attraction-stat-value">16</span> <span class="attraction-stat-label">Stories</span></div>
+                </div>
+              </div>
+              <div class="attraction-card animate-in" style="--attraction-color: hsl(280, 70%, 60%);">
+                <div class="attraction-name">SEA LIFE · LEGOLAND · Mini Golf · Rink</div>
+                <p class="attraction-desc">Every one of these attractions drives foot traffic directly past retail and dining tenants. That's by design — entertainment is the engine, retail is the destination.</p>
               </div>
             </div>
           </div>
@@ -499,20 +503,20 @@
           <div style="margin-bottom: var(--space-3xl);">
             <h3 class="animate-in" style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin-bottom: var(--space-xl);">Partnership Tiers</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl);" class="stagger-container">
-              <div class="card animate-in" style="border-top: 3px solid var(--color-accent); text-align: center;">
-                <div style="font-size: var(--text-xs); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: var(--space-md);">Presenting</div>
-                <div class="card-title" style="font-size: var(--text-2xl);">Title Sponsor</div>
-                <p class="card-text" style="margin-top: var(--space-md);">Full property naming rights for events, signage throughout the complex, exclusive digital and physical media placements, and dedicated activation zones.</p>
+              <div class="tier-card animate-in" style="--tier-color: var(--color-accent);">
+                <div class="tier-badge">Presenting</div>
+                <div class="tier-title">Title Sponsor</div>
+                <p class="tier-desc">Full property naming rights for events, signage throughout the complex, exclusive digital and physical media placements, and dedicated activation zones.</p>
               </div>
-              <div class="card animate-in" style="border-top: 3px solid hsl(220, 70%, 60%); text-align: center;">
-                <div style="font-size: var(--text-xs); color: hsl(220, 70%, 60%); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: var(--space-md);">Premium</div>
-                <div class="card-title" style="font-size: var(--text-2xl);">Category Partner</div>
-                <p class="card-text" style="margin-top: var(--space-md);">Exclusive category rights (automotive, tech, fashion), branded lounge areas, co-branded events, and preferential media placements across the property.</p>
+              <div class="tier-card animate-in" style="--tier-color: hsl(220, 70%, 60%);">
+                <div class="tier-badge">Premium</div>
+                <div class="tier-title">Category Partner</div>
+                <p class="tier-desc">Exclusive category rights (automotive, tech, fashion), branded lounge areas, co-branded events, and preferential media placements across the property.</p>
               </div>
-              <div class="card animate-in" style="border-top: 3px solid hsl(152, 60%, 48%); text-align: center;">
-                <div style="font-size: var(--text-xs); color: hsl(152, 60%, 48%); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: var(--space-md);">Experiential</div>
-                <div class="card-title" style="font-size: var(--text-2xl);">Pop-Up & Activation</div>
-                <p class="card-text" style="margin-top: var(--space-md);">Short-term immersive brand experiences in high-traffic zones. Ideal for product launches, seasonal campaigns, and influencer-driven activations.</p>
+              <div class="tier-card animate-in" style="--tier-color: hsl(152, 60%, 48%);">
+                <div class="tier-badge">Experiential</div>
+                <div class="tier-title">Pop-Up & Activation</div>
+                <p class="tier-desc">Short-term immersive brand experiences in high-traffic zones. Ideal for product launches, seasonal campaigns, and influencer-driven activations.</p>
               </div>
             </div>
           </div>

@@ -1,0 +1,225 @@
+/* ============================================================
+   POLISH.CSS — Final Consistency & Premium Refinements
+   ============================================================ */
+
+/* ── Videos should match images (rounded corners) ────────── */
+.section-inner video {
+  border-radius: 16px;
+}
+
+/* ── Sponsorship Tier Cards — Premium Glass Treatment ─────── */
+.tier-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-glass);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid var(--color-glass-border);
+  border-radius: 16px;
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+  transition:
+    transform 0.4s var(--ease-out-expo),
+    box-shadow 0.4s var(--ease-out-expo),
+    border-color 0.4s var(--ease-out-expo);
+}
+
+.tier-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--tier-color, var(--color-accent));
+}
+
+.tier-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px hsla(0, 0%, 0%, 0.3);
+  border-color: var(--tier-color, var(--color-accent));
+}
+
+.tier-badge {
+  display: inline-block;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  color: var(--tier-color, var(--color-accent));
+  margin-bottom: var(--space-lg);
+  padding: 4px 14px;
+  border: 1px solid var(--tier-color, var(--color-accent));
+  border-radius: 100px;
+  opacity: 0.8;
+}
+
+.tier-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.tier-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ── Featured Restaurant Cards — Elevated Minimal ─────────── */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+}
+
+.featured-card {
+  position: relative;
+  padding: var(--space-xl);
+  border-radius: 12px;
+  background: var(--color-glass);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid var(--color-glass-border);
+  transition:
+    transform 0.4s var(--ease-out-expo),
+    border-color 0.4s var(--ease-out-expo);
+  overflow: hidden;
+}
+
+.featured-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-out-expo);
+}
+
+.featured-card:hover {
+  transform: translateY(-3px);
+  border-color: hsla(38, 50%, 50%, 0.25);
+}
+
+.featured-card:hover::after {
+  opacity: 1;
+}
+
+.featured-name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.featured-type {
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-md);
+}
+
+.featured-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ── Entertainment Attraction Cards — Distinct from Dining ── */
+.attraction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
+
+.attraction-card {
+  position: relative;
+  padding: var(--space-2xl);
+  border-radius: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition:
+    transform 0.4s var(--ease-out-expo),
+    border-color 0.4s var(--ease-out-expo),
+    box-shadow 0.4s var(--ease-out-expo);
+}
+
+.attraction-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--attraction-color, var(--color-accent));
+  border-radius: 0 4px 4px 0;
+}
+
+.attraction-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--attraction-color, var(--color-accent));
+  box-shadow: 0 8px 30px hsla(0, 0%, 0%, 0.3);
+}
+
+.attraction-name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--attraction-color, var(--color-text-primary));
+  margin-bottom: var(--space-sm);
+}
+
+.attraction-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.attraction-stats {
+  display: flex;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.attraction-stat-value {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--attraction-color, var(--color-accent));
+}
+
+.attraction-stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── Responsive Fixes ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .attraction-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .tier-card {
+    padding: var(--space-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
