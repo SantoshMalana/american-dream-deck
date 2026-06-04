@@ -112,7 +112,7 @@
 }
 
 /* ── Nav Text (label next to icon) ─────────────────────────── */
-.nav-text {
+.nav-text, .nav-label {
   transition: opacity var(--transition-fast),
               visibility var(--transition-fast);
 }
