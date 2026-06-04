@@ -1,3 +1,4 @@
+import './styles/index.css';
 import { Router } from './utils/router.js';
 import { SidebarNav } from './components/sidebar-nav.js';
 import { LoadingScreen } from './components/loading-screen.js';
