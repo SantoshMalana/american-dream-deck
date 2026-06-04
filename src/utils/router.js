@@ -1,25 +1,16 @@
-// Manages section visibility based on URL hash
-// Sections are identified by data-section attribute
-// Default section is 'hero'
-
 export class Router {
   constructor() {
     this.currentSection = null;
     this.sections = new Map();
-    this.onSectionChange = null; // callback
+    this.onSectionChange = null;
     this.init();
   }
 
   init() {
-    // Discover all sections
     document.querySelectorAll('[data-section]').forEach(el => {
       this.sections.set(el.dataset.section, el);
     });
-
-    // Listen for hash changes
     window.addEventListener('hashchange', () => this.handleRoute());
-
-    // Initial route
     this.handleRoute();
   }
 
@@ -32,29 +23,31 @@ export class Router {
     if (sectionId === this.currentSection) return;
     if (!this.sections.has(sectionId)) return;
 
-    // Hide current section
+    // Hide current
     if (this.currentSection) {
       const current = this.sections.get(this.currentSection);
       current.classList.remove('active');
-      current.classList.add('section-exit');
-      // After animation, fully hide
-      setTimeout(() => current.classList.remove('section-exit'), 500);
+      // Reset animate-in elements so they re-animate on re-entry
+      current.querySelectorAll('.animate-in.visible').forEach(el => {
+        el.classList.remove('visible');
+      });
     }
 
-    // Show new section
+    // Show next
     const next = this.sections.get(sectionId);
     next.classList.add('active');
+    // Scroll to top of new section
+    next.scrollTop = 0;
 
-    // Update hash without triggering hashchange
-    const previousSection = this.currentSection;
+    const prev = this.currentSection;
     this.currentSection = sectionId;
+
     if (window.location.hash.slice(1) !== sectionId) {
       history.replaceState(null, '', `#${sectionId}`);
     }
 
-    // Callback
     if (this.onSectionChange) {
-      this.onSectionChange(sectionId, previousSection);
+      this.onSectionChange(sectionId, prev);
     }
   }
 
@@ -70,7 +63,6 @@ export class Router {
     const ids = this.getSectionIds();
     const idx = this.getCurrentIndex();
     if (idx < ids.length - 1) {
-      this.navigateTo(ids[idx + 1]);
       window.location.hash = ids[idx + 1];
     }
   }
@@ -79,7 +71,6 @@ export class Router {
     const ids = this.getSectionIds();
     const idx = this.getCurrentIndex();
     if (idx > 0) {
-      this.navigateTo(ids[idx - 1]);
       window.location.hash = ids[idx - 1];
     }
   }

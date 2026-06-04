@@ -9,105 +9,81 @@ class App {
     this.router = null;
     this.nav = null;
     this.loading = new LoadingScreen();
+    this.animatedSections = new Set();
   }
 
   async init() {
-    // Show loading screen
     this.loading.show();
-
-    // Wait for fonts to load
     await document.fonts.ready;
 
-    // Initialize router
     this.router = new Router();
-
-    // Initialize navigation
     this.nav = new SidebarNav(this.router);
 
-    // Wrap the router's onSectionChange callback set by SidebarNav
-    // so the App can also react to section transitions
-    const originalCallback = this.router.onSectionChange;
+    // Wrap the router callback so App also reacts
+    const originalCb = this.router.onSectionChange;
     this.router.onSectionChange = (sectionId, prev) => {
-      if (originalCallback) originalCallback(sectionId, prev);
+      if (originalCb) originalCb(sectionId, prev);
       this.onSectionEnter(sectionId);
     };
 
-    // Hide loading screen
     await this.loading.hide();
-
-    // Trigger initial section animations
     this.onSectionEnter(this.router.currentSection || 'hero');
-
-    console.log('American Dream Interactive Deck initialized');
+    this.initAIForm();
   }
 
   onSectionEnter(sectionId) {
-    // Trigger animate-in elements in the active section
     const section = document.querySelector(`[data-section="${sectionId}"]`);
-    if (section) {
-      const animateElements = section.querySelectorAll('.animate-in');
-      animateElements.forEach((el, i) => {
-        setTimeout(() => el.classList.add('visible'), i * 100 + 200);
-      });
-      
-      // Initialize counters
+    if (!section) return;
+
+    // Stagger animate-in elements
+    const elements = section.querySelectorAll('.animate-in');
+    elements.forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 80 + 150);
+    });
+
+    // Animate counters only once per section
+    if (!this.animatedSections.has(sectionId)) {
+      this.animatedSections.add(sectionId);
       setTimeout(() => {
-        const counters = StatCounter.initAll(section);
-        counters.forEach(c => c.animate());
-      }, 500);
+        StatCounter.initAll(section).forEach(c => c.animate());
+      }, 400);
     }
   }
-}
 
-// Initialize when DOM is ready
-const app = new App();
+  initAIForm() {
+    const form = document.getElementById('ai-generator-form');
+    if (!form) return;
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => app.init());
-} else {
-  app.init();
-}
+    const btn = document.getElementById('ai-generate-btn');
+    const resultContainer = document.getElementById('ai-result-container');
+    const loadingEl = document.getElementById('ai-loading');
+    const outputEl = document.getElementById('ai-output');
 
-// AI Generator Logic
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('ai-generator-form');
-  const btn = document.getElementById('ai-generate-btn');
-  const resultContainer = document.getElementById('ai-result-container');
-  const loadingIndicator = document.getElementById('ai-loading');
-  const outputEl = document.getElementById('ai-output');
-
-  if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const brandName = document.getElementById('ai-brand-name').value;
-      
+      const brandName = document.getElementById('ai-brand-name').value.trim();
       if (!brandName) return;
 
-      // Update UI
       btn.disabled = true;
       btn.style.opacity = '0.5';
       resultContainer.style.display = 'block';
       outputEl.style.display = 'none';
-      loadingIndicator.style.display = 'block';
+      outputEl.style.color = '';
+      loadingEl.style.display = 'block';
 
       try {
-        const response = await fetch('/api/generate-brief', {
+        const res = await fetch('/api/generate-brief', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ brandName })
         });
-
-        const data = await response.json();
-
-        if (!response.ok) {
-          throw new Error(data.error || 'Failed to generate');
-        }
-
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Generation failed');
         outputEl.textContent = data.brief;
-        loadingIndicator.style.display = 'none';
+        loadingEl.style.display = 'none';
         outputEl.style.display = 'block';
       } catch (err) {
-        loadingIndicator.style.display = 'none';
+        loadingEl.style.display = 'none';
         outputEl.style.display = 'block';
         outputEl.textContent = 'Error: ' + err.message;
         outputEl.style.color = '#ff4d4f';
@@ -117,4 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
+}
+
+const app = new App();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => app.init());
+} else {
+  app.init();
+}

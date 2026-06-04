@@ -6,13 +6,14 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    minify: 'terser',
+    minify: 'esbuild',
+    target: 'es2020',
     rollupOptions: {
       input: './index.html'
     }
   },
   server: {
     port: 3000,
-    open: true
+    open: false
   }
 });

@@ -1,54 +1,38 @@
-/* ============================================================
-   NAVIGATION.CSS — Sidebar Navigation
-   American Dream Interactive Sales Deck
-   
-   Header with branding, nav item list with active indicator,
-   footer with progress bar, and sidebar toggle button.
-   ============================================================ */
-
-/* ── Nav Header ────────────────────────────────────────────── */
+/* Nav Header */
 .nav-header {
   padding: var(--space-xl);
   border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  justify-content: space-between;
   flex-shrink: 0;
 }
 
-.nav-header-text {
+.nav-logo {
   font-family: var(--font-display);
-  font-size: var(--text-lg);
+  font-size: var(--text-sm);
   color: var(--color-accent);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  line-height: 1.2;
-  white-space: nowrap;
-  transition: opacity var(--transition-fast),
-              visibility var(--transition-fast);
+  line-height: 1.3;
+  font-weight: 600;
+  transition: opacity 0.2s;
 }
 
-.nav-logo-icon {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-  color: var(--color-accent);
-}
-
-/* ── Nav List ──────────────────────────────────────────────── */
+/* Nav List */
 .nav-list {
-  padding: var(--space-md) 0;
+  padding: var(--space-sm) 0;
   flex: 1;
   overflow-y: auto;
 }
 
-/* ── Nav Item ──────────────────────────────────────────────── */
+/* Nav Item */
 .nav-item {
   display: flex;
   align-items: center;
   gap: var(--space-md);
   width: 100%;
-  padding: var(--space-md) var(--space-xl);
+  padding: 12px var(--space-xl);
   color: var(--color-text-muted);
   font-size: var(--text-sm);
   font-family: var(--font-body);
@@ -58,12 +42,11 @@
   border: none;
   background: transparent;
   position: relative;
-  transition: color var(--transition-fast),
-              background-color var(--transition-fast);
+  transition: color 0.2s, background-color 0.2s;
   white-space: nowrap;
 }
 
-/* Left border indicator */
+/* Left accent indicator */
 .nav-item::before {
   content: '';
   position: absolute;
@@ -74,32 +57,31 @@
   height: 0;
   background: var(--color-accent);
   border-radius: 0 2px 2px 0;
-  transition: height var(--transition-normal);
+  transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Hover */
 .nav-item:hover {
   color: var(--color-text-secondary);
-  background-color: hsla(220, 15%, 14%, 0.4);
+  background: hsla(220, 15%, 14%, 0.4);
 }
 
-/* Active */
 .nav-item.active {
   color: var(--color-text-primary);
   font-weight: 500;
+  background: hsla(220, 15%, 14%, 0.3);
 }
 
 .nav-item.active::before {
   height: 60%;
 }
 
-/* ── Nav Icon ──────────────────────────────────────────────── */
+/* Nav Icon */
 .nav-icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
-  opacity: 0.5;
-  transition: opacity var(--transition-fast);
+  opacity: 0.4;
+  transition: opacity 0.2s;
 }
 
 .nav-item:hover .nav-icon {
@@ -111,33 +93,14 @@
   color: var(--color-accent);
 }
 
-/* ── Nav Text (label next to icon) ─────────────────────────── */
-.nav-text, .nav-label {
-  transition: opacity var(--transition-fast),
-              visibility var(--transition-fast);
+/* Nav Label */
+.nav-label {
+  transition: opacity 0.2s;
 }
 
-/* ── Nav Section Number ────────────────────────────────────── */
-.nav-number {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  font-variant-numeric: tabular-nums;
-  min-width: 1.2em;
-  opacity: 0.6;
-}
-
-.nav-item.active .nav-number {
-  color: var(--color-accent);
-  opacity: 1;
-}
-
-/* ── Nav Footer ────────────────────────────────────────────── */
+/* Nav Footer */
 .nav-footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--space-xl);
+  padding: var(--space-lg) var(--space-xl);
   border-top: 1px solid var(--color-border);
   flex-shrink: 0;
   margin-top: auto;
@@ -147,90 +110,55 @@
   font-size: var(--text-xs);
   color: var(--color-text-muted);
   letter-spacing: 0.05em;
-  transition: opacity var(--transition-fast),
-              visibility var(--transition-fast);
+  display: block;
+  margin-bottom: var(--space-sm);
+  transition: opacity 0.2s;
 }
 
-/* ── Nav Progress Bar ──────────────────────────────────────── */
+/* Progress bar */
 .nav-progress {
   height: 2px;
   background: var(--color-border);
-  position: relative;
-  margin-top: var(--space-md);
   border-radius: 1px;
   overflow: hidden;
 }
 
 .nav-progress-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
-  width: 0%;
-  background: var(--color-accent);
+  width: 12.5%;
+  background: linear-gradient(90deg, var(--color-accent), hsla(38, 90%, 65%, 1));
   border-radius: 1px;
-  transition: width var(--transition-normal);
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── Sidebar Toggle ────────────────────────────────────────── */
+/* Sidebar toggle */
 .sidebar-toggle {
-  position: absolute;
-  top: var(--space-xl);
-  right: calc(-1 * var(--space-lg));
-  z-index: 101;
   width: 28px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-surface);
+  background: transparent;
   border: 1px solid var(--color-border);
-  border-radius: 50%;
+  border-radius: 6px;
   color: var(--color-text-muted);
   cursor: pointer;
-  transition: color var(--transition-fast),
-              background-color var(--transition-fast),
-              transform var(--transition-fast);
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
 }
 
 .sidebar-toggle:hover {
   color: var(--color-text-primary);
-  background: var(--color-surface-hover);
+  background: var(--color-surface);
 }
 
 .sidebar-toggle svg {
   width: 14px;
   height: 14px;
-  transition: transform var(--transition-fast);
 }
 
-.sidebar.collapsed .sidebar-toggle svg {
-  transform: rotate(180deg);
-}
-
-/* ── Mobile Menu Button ────────────────────────────────────── */
-.mobile-menu-btn {
-  display: none;
-  position: fixed;
-  top: var(--space-md);
-  left: var(--space-md);
-  z-index: 98;
-  width: 40px;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-}
-
+/* Mobile */
 @media (max-width: 1024px) {
-  .mobile-menu-btn {
-    display: flex;
-  }
-
   .sidebar-toggle {
     display: none;
   }

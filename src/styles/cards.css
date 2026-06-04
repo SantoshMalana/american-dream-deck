@@ -1,15 +1,21 @@
 .card {
-  background: var(--color-surface);
+  background: hsla(220, 15%, 14%, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: var(--space-xl);
-  border: 1px solid var(--color-border);
-  transition: all var(--transition-normal);
+  border: 1px solid hsla(220, 12%, 25%, 0.5);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+  will-change: transform;
 }
 
 .card:hover {
-  border-color: var(--color-accent-subtle);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  border-color: hsla(38, 85%, 55%, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+              0 0 0 1px hsla(38, 85%, 55%, 0.1);
 }
 
 .card-grid {
@@ -26,9 +32,9 @@
 }
 
 .card-text {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .card-stat {
@@ -38,6 +44,7 @@
   color: var(--color-accent);
   font-family: var(--font-display);
   margin-bottom: var(--space-xs);
+  line-height: 1;
 }
 
 .card-label {
@@ -53,6 +60,13 @@
   width: 100%;
   border-radius: 8px;
   margin-bottom: var(--space-lg);
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+/* Card grid responsive */
+@media (max-width: 640px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
