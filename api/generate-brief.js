@@ -46,9 +46,9 @@ Make the prospect feel like not being at American Dream is a missed opportunity.
       ]
     };
 
-    // Using Claude 3 Haiku for speed and low cost
+    // Using Claude 3.5 Sonnet since Claude 3 Haiku is marked as legacy
     const command = new InvokeModelCommand({
-      modelId: "anthropic.claude-3-haiku-20240307-v1:0",
+      modelId: "anthropic.claude-3-5-sonnet-20240620-v1:0",
       contentType: "application/json",
       accept: "application/json",
       body: JSON.stringify(payload)
