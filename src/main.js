@@ -30,6 +30,7 @@ class App {
     this.onSectionEnter(this.router.currentSection || 'hero');
     StatCounter.initAll(); // Initialize counters globally using IntersectionObserver
     this.initAIForm();
+    this.initContactForm();
     this.initScrollObserver();
   }
 
@@ -125,6 +126,32 @@ Next Step: Let's schedule a site tour to view the premier corner-cap locations i
         btn.disabled = false;
         btn.style.opacity = '1';
       }
+    });
+  }
+  initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const btn = contactForm.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      
+      // Visual feedback
+      btn.innerHTML = 'Sent Successfully <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>';
+      btn.style.background = 'var(--color-success)';
+      btn.style.color = '#fff';
+      
+      // Reset form
+      contactForm.reset();
+      
+      // Reset button after 3 seconds
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 3000);
     });
   }
 }
