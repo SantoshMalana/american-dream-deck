@@ -31,6 +31,7 @@ class App {
     StatCounter.initAll(); // Initialize counters globally using IntersectionObserver
     this.initAIForm();
     this.initContactForm();
+    this.initCustomCursor();
     this.initScrollObserver();
   }
 
@@ -153,6 +154,36 @@ Next Step: Let's schedule a site tour to view the premier corner-cap locations i
         btn.style.color = '';
       }, 3000);
     });
+  }
+
+  initCustomCursor() {
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorDot = document.querySelector('.custom-cursor-dot');
+    
+    if (!cursor || !cursorDot) return;
+
+    // Only enable if hover is supported
+    if (window.matchMedia('(hover: hover)').matches) {
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        
+        cursorDot.style.left = e.clientX + 'px';
+        cursorDot.style.top = e.clientY + 'px';
+      });
+
+      // Add hover states to interactable elements
+      const hoverTargets = document.querySelectorAll('a, button, select, input, textarea, .card, .tier-card, .attraction-hero-card, .featured-card');
+      
+      hoverTargets.forEach(target => {
+        target.addEventListener('mouseenter', () => {
+          cursor.classList.add('hovering');
+        });
+        target.addEventListener('mouseleave', () => {
+          cursor.classList.remove('hovering');
+        });
+      });
+    }
   }
 }
 
