@@ -3,7 +3,7 @@
 A bespoke, non-linear interactive sales deck built for the American Dream property. Designed to replace fragmented pitch materials (PDFs, YouTube links, spreadsheets) with a single, high-impact web experience for prospective retail tenants, sponsors, and event partners.
 
 ## 🚀 Live Demo
-**[Insert Vercel/Netlify URL Here]**
+**[https://american-dream-deck-chi.vercel.app/](https://american-dream-deck-chi.vercel.app/)**
 
 ## 💡 The Vision
 The world's largest shopping malls are no longer just malls—they are mixed-use destinations operating like small cities. This tool was built to convey the scale, energy, and commercial opportunity of the American Dream within the first 10 seconds. 
