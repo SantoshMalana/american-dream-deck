@@ -32,6 +32,7 @@ class App {
     this.initAIForm();
     this.initContactForm();
     this.initCustomCursor();
+    this.initMagneticButtons();
     this.initScrollObserver();
   }
 
@@ -181,6 +182,29 @@ Next Step: Let's schedule a site tour to view the premier corner-cap locations i
         });
         target.addEventListener('mouseleave', () => {
           cursor.classList.remove('hovering');
+        });
+      });
+    }
+  }
+
+  initMagneticButtons() {
+    const buttons = document.querySelectorAll('.cta-button');
+    
+    // Only enable if hover is supported
+    if (window.matchMedia('(hover: hover)').matches) {
+      buttons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          
+          // Pull the button towards the cursor
+          btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          // Snap back to center
+          btn.style.transform = 'translate(0px, 0px)';
         });
       });
     }
