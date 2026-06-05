@@ -33,6 +33,7 @@ class App {
     this.initContactForm();
     this.initCustomCursor();
     this.initMagneticButtons();
+    this.initFilmstrip();
     this.initScrollObserver();
   }
 
@@ -208,6 +209,39 @@ Next Step: Let's schedule a site tour to view the premier corner-cap locations i
         });
       });
     }
+  }
+
+  initFilmstrip() {
+    const wrapper = document.querySelector('.filmstrip-wrapper');
+    const btnLeft = document.querySelector('.filmstrip-arrow-left');
+    const btnRight = document.querySelector('.filmstrip-arrow-right');
+    
+    if (!wrapper || !btnLeft || !btnRight) return;
+
+    const updateButtons = () => {
+      // Small threshold (5px) to avoid precision issues
+      const isAtStart = wrapper.scrollLeft <= 5;
+      const isAtEnd = wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 5;
+      
+      btnLeft.disabled = isAtStart;
+      btnRight.disabled = isAtEnd;
+    };
+
+    wrapper.addEventListener('scroll', updateButtons, { passive: true });
+    
+    // Initial check
+    updateButtons();
+
+    // Scroll amount is roughly one card + gap
+    const scrollAmount = 400 + 48;
+
+    btnLeft.addEventListener('click', () => {
+      wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    btnRight.addEventListener('click', () => {
+      wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
   }
 }
 
